@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'capu'
 SITENAME = "capu's blog"
 SITEURL = ''
-SITE_TITLE = "[capu@blog]$"
+SITESUBTITLE = 'ahre se hacia el hacker'
 
 PATH = 'content'
 
@@ -26,8 +26,7 @@ SOCIAL = ( ('github', 'http://getpelican.com/'),
          ('twitter', 'http://python.org/') )
 
 # Social widget
-LINKS = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+# LINKS = (('You can add links in your config file', '#'), ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = False
 

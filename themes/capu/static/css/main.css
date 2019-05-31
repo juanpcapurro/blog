@@ -80,13 +80,18 @@ blockquote {
 .main-header{
   display:flex;
   justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
 }
 .site-title{
-  font-size: 8em;
+  font-size: 3em;
+  margin-left: 20px;
 }
-.header-wrapper {
-  display: flex;
-  flex-flow: column;
+.site-title .prompt{
+  font-weight: 600;
+}
+.site-subtitle{
+  font-style: italic;
 }
 .navigation-section{
   font-weight: 600;
@@ -94,6 +99,7 @@ blockquote {
   padding-right: 0.4em;
   text-transform: uppercase;
   text-align: right;
+  align-self: stretch;
 }
 .navigation-section ul{
   margin: 0px;

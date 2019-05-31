@@ -33,31 +33,40 @@
 </head>
 
 <body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="{{ SITEURL }}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
-        </header><!-- /#banner -->
-        <nav id="menu"><ul>
-        {% for title, link in MENUITEMS %}
-            <li><a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
-        {% if DISPLAY_PAGES_ON_MENU %}
-          {% for p in pages %}
-            <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-          {% endfor %}
-        {% endif %}
-        {% if DISPLAY_CATEGORIES_ON_MENU %}
-          {% for cat, null in categories %}
-            <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-          {% endfor %}
-        {% endif %}
-        </ul></nav><!-- /#menu -->
+    <div class="wrapper">
+
+      <div class="main-header">
+        <div>
+          <div class="site-title">
+            <span class="prompt">_</span>{{ SITENAME }}
+          </div>
+          <div class="site-subtitle">
+            {{ SITESUBTITLE }}
+          </div>
+        </div>
+        <div  class="navigation-section">
+          <ul>
+            {% if SOCIAL %}
+              {% for name, url in SOCIAL %}
+                <li><a href="{{ SITEURL }}/{{ url|e }}">{{ name }}</a></li>
+              {% endfor %}
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+      <div class="page-content">
         {% block content %}
-        {% endblock %}
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-        </footer><!-- /#contentinfo -->
-</body>
+        {% endblock content %}
+      </div>
+
+      <footer >
+        {% if LINKS %}
+          |
+          {% for name, url in LINKS %}
+            <span><a href="{{ url|e }}">{{ name }}</a></span> |
+          {% endfor %}
+        {% endif %}
+      </footer>
+    </div>
+  </body>
 </html>
