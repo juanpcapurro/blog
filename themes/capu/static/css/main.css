@@ -1,0 +1,100 @@
+/******************************************************************************/
+/*                               General Style                                */
+/******************************************************************************/
+
+a {
+  text-decoration: none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  color: #272727;
+  line-height: 1;
+  background: 0 0;
+  font-size: 115%;
+  font-family: "Inconsolata", "monospace"
+}
+h1 {
+  margin-bottom: 5px;
+}
+p {
+  line-height: 150%;
+}
+a {
+  color: #272727;
+  text-decoration: none;
+}
+a:visited {
+  color: #1a0dab;
+  text-decoration: none;
+}
+a:hover {
+  background-color: #eee;
+  text-decoration: none;
+}
+a:active {
+  color: #1a0dab;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  padding: 2px;
+  padding-left: 6px;
+}
+ol {
+  margin-left: 30px;
+  padding-bottom: 1rem;
+}
+blockquote {
+  color: #272727;
+  border-left: 4px solid #272727;
+  padding-left: 15px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+}
+.wrapper {
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 30px;
+}
+@media screen and (max-width: 600px) {
+  .wrapper {
+    padding: 0.4rem;
+  }
+}
+
+.main-header{
+  display:flex;
+  justify-content: space-between;
+}
+.site-title{
+  font-size: 8em;
+}
+.header-wrapper {
+  display: flex;
+  flex-flow: column;
+}
+.navigation-section{
+  font-weight: 600;
+  border-right: 2px dashed #272727;
+  padding-right: 0.4em;
+  text-transform: uppercase;
+  text-align: right;
+}
+.navigation-section ul{
+  margin: 0px;
+}
