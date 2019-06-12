@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'capu'
 SITENAME = "capu's blog"
-SITEURL = ''
+SITEURL = 'http://localhost:8000'
 SITESUBTITLE = 'ahre se hacia el hacker'
 
 PATH = 'content'
@@ -22,8 +22,8 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-SOCIAL = ( ('github', 'http://getpelican.com/'),
-         ('twitter', 'http://python.org/') )
+SOCIAL = ( ('github', 'http://github.com/juanpcapurro'),
+         ('twitter', 'http://twitter.com/cuddle_lord') )
 
 # Social widget
 # LINKS = (('You can add links in your config file', '#'), ('Another social link', '#'),)
@@ -35,3 +35,8 @@ DEFAULT_PAGINATION = False
 
 THEME = 'themes/capu'
 
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['pelican-global-rst-include']
+
+# idk, this seems to be relative to the context directory
+RST_GLOBAL_INCLUDES =['../globals/globals.rst']

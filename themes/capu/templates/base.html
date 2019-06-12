@@ -36,19 +36,19 @@
     <div class="wrapper">
 
       <div class="main-header">
-        <div>
-          <div class="site-title">
-            <span class="prompt">_</span>{{ SITENAME }}
-          </div>
-          <div class="site-subtitle">
-            {{ SITESUBTITLE }}
-          </div>
-        </div>
+        <a href="{{ SITEURL|e }}">
+            <div class="site-title">
+              <span class="prompt">_</span>{{ SITENAME }}
+            </div>
+            <div class="site-subtitle">
+              {{ SITESUBTITLE }}
+            </div>
+          </a>
         <div  class="navigation-section">
           <ul>
             {% if SOCIAL %}
               {% for name, url in SOCIAL %}
-                <li><a href="{{ SITEURL }}/{{ url|e }}">{{ name }}</a></li>
+                <li><a href="{{ url|e }}">{{ name }}</a></li>
               {% endfor %}
             {% endif %}
           </ul>
