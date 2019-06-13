@@ -2,5 +2,9 @@
 .. role:: strike
   :class: strike
 
+.. |br| raw:: html
+
+  <br />
+
 .. _my github: https://github.com/juanpcapurro
-.. _twitter: https://twitter.com/cuddle_lord
+.. _my twitter: https://twitter.com/cuddle_lord

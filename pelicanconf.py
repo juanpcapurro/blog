@@ -14,8 +14,8 @@ TIMEZONE = 'America/Argentina/Buenos_Aires'
 DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
 FEED_ALL_RSS = 'feeds/all.rss.xml'
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
@@ -26,7 +26,7 @@ SOCIAL = ( ('github', 'http://github.com/juanpcapurro'),
          ('twitter', 'http://twitter.com/cuddle_lord') )
 
 # Social widget
-# LINKS = (('You can add links in your config file', '#'), ('Another social link', '#'),)
+LINKS = (('website home', 'http://capu.tech'), ('the same link, but fillng more space', 'http://capu.tech'),)
 
 DEFAULT_PAGINATION = False
 

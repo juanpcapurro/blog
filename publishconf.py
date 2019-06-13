@@ -11,11 +11,12 @@ sys.path.append(os.curdir)
 from pelicanconf import *
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
+# note to self: I disregarded the advice from the person that knowns what they are doing in the previous line,
+# and used http://nginx.org/en/docs/http/ngx_http_sub_module.html to rewrite the urls in the https site
+# this was done in order for the site to be available on both http and https
+# future self, please note here how long it took for it to come back and kick me in the balls: 
 SITEURL = 'http://blog.capu.tech'
 RELATIVE_URLS = False
-
-FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 

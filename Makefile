@@ -10,8 +10,8 @@ PUBLISHCONF=$(BASEDIR)/publishconf.py
 
 SSH_HOST=capu.tech
 SSH_PORT=22
-SSH_USER=capu
-SSH_TARGET_DIR=/var/www/blog
+SSH_USER=capurro
+SSH_TARGET_DIR=/var/www/blog.capu.tech
 
 
 DEBUG ?= 0

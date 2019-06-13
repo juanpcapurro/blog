@@ -125,7 +125,7 @@ blockquote {
 .article-title{
   margin: 0px;
 }
-.entry-content p {
+.entry-summary p {
   margin: 0px;
 }
 .author-and-date{
@@ -133,4 +133,18 @@ blockquote {
 }
 .strike {
   text-decoration: line-through;
+}
+
+.wrapper > footer {
+  /* I've got no formal knowledge of formatting, and this shows it */
+  margin-top: 4em;
+  margin-left: -1em;
+  margin-right: -1em;
+}
+
+.inline-icon {
+  display: inline;
+  max-height: 1em;
+  max-width: 1em;
+  vertical-align: bottom;
 }

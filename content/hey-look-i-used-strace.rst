@@ -1,8 +1,8 @@
 ======================================
 Hey look! I used strace for something!
 ======================================
-:date: 2019-05-20 21:20
+:date: 2019-05-29 21:20
 :category: unix
-
-Today is the day I begin my journey towards my life goal of being a moderately famous internet personality in my second language.
+:status: draft
+:summary: I'm really happy to have found a situation where knowing what a system call is was useful for something.
 
