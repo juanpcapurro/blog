@@ -71,7 +71,7 @@ blockquote {
   margin: auto;
   padding: 60px 30px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   .wrapper {
     padding: 0.4rem;
   }
@@ -94,6 +94,7 @@ blockquote {
 .site-subtitle{
   font-style: italic;
   margin-left: 10px;
+  margin-top: 0.5rem;
 }
 .navigation-section{
   font-weight: 600;
@@ -147,4 +148,21 @@ blockquote {
   max-height: 1em;
   max-width: 1em;
   vertical-align: bottom;
+}
+
+.entry-content img {
+  padding: 1em 2em;
+  display: block;
+  margin: auto;
+  background-color: #e0e0e0;
+  max-width: 100%;
+}
+
+/* for reStructuredText ``code`` */
+tt {
+  background-color: #efefef;
+}
+
+.allcaps{
+  text-transform: uppercase;
 }

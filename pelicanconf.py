@@ -5,9 +5,10 @@ from __future__ import unicode_literals
 AUTHOR = 'capu'
 SITENAME = "capu's blog"
 SITEURL = 'http://localhost:8000'
-SITESUBTITLE = 'ahre se hacia el hacker'
+SITESUBTITLE = 'I\'m probably over-engineering this'
 
 PATH = 'content'
+STATIC_PATHS = ['static']
 
 TIMEZONE = 'America/Argentina/Buenos_Aires'
 

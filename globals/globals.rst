@@ -2,6 +2,9 @@
 .. role:: strike
   :class: strike
 
+.. role:: allcaps
+  :class: allcaps
+
 .. |br| raw:: html
 
   <br />
