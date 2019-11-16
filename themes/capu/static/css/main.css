@@ -47,7 +47,7 @@ a:active {
   color: #1a0dab;
   text-decoration: none;
 }
-ul {
+.styleless-list li{
   list-style: none;
 }
 ul li {

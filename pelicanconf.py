@@ -24,10 +24,11 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 SOCIAL = ( ('github', 'http://github.com/juanpcapurro'),
-         ('twitter', 'http://twitter.com/cuddle_lord') )
+         ('twitter', 'http://twitter.com/cuddle_lord'),
+         ('hire me', 'http://hire.capu.tech/') )
 
 # Social widget
-LINKS = (('website home', 'http://capu.tech'), ('the same link, but fillng more space', 'http://capu.tech'),)
+LINKS = (('website home', 'http://capu.tech'), ('hire me', 'http://hire.capu.tech/'))
 
 DEFAULT_PAGINATION = False
 
