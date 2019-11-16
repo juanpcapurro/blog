@@ -4,6 +4,7 @@ Too dumb to read the documentation? Intercept system calls instead!
 :date: 2019-06-14 22:04
 :category: unix
 :author: capu
+:status: draft
 :summary: Join me in this brainfarting journey
 
 -------
@@ -36,7 +37,7 @@ How vim-tagbar and ctags work
 A 'tag' is a way of indexing definitions (variables, functions, classes...) in source code so it can very easily be looked up, since this is a rather usual requirement when developing.
 
 There are programs like `ctags`_ which can create this kind of index for a file, or an entire directory, and usually store them in a file called ``tags``, which is then queried when using the go-to-definition functionality of an editor. |br|
-You probably have used it (or some substitute) yourself! In most editors the go-to-definition is used by holding ``CTRL`` and clicking the desired name, whilst in Vi/Vim/neovim this is achieved by ``<C-]>``, that is, holding down ``CTRL`` and pressing ``]``.
+You probably have used it (or some substitute) yourself! In most editors the go-to-definition is used by holding ``CTRL`` and clicking the desired name, whilst in vim this is achieved by ``<C-]>``, that is, holding down ``CTRL`` and pressing ``]``.
 
 The difference with tagbar is, instead of using the ``tags`` file to find where something is defined, the definitions of a particular file are listed.
 Since the ``tags`` file is sorted by the definition names, and not the files they are defined in, it's faster to run ``ctags`` over the current file than it is to read the already generated file and filter only the definitions of the current file (and this is less fragile since it doesn't depend on the tags file being up to date, or even on it existing at all)
@@ -55,8 +56,7 @@ These regexes should be added into one of ctags' configuration files ``~/.ctags`
 I create the file, try to open the tagbar again, and... it's still empty.
 
 Running ctags on the file produced an empty (well, not empty, but only comments) tags file:
-
-.. code::
+code::
 
     [~/tmp/metacoin-box, master, 60s]: ctags contracts/MetaCoin.sol
     [~/tmp/metacoin-box, master+1]: cat tags
@@ -94,6 +94,7 @@ Just as a sanity check, lets try to configure the plugin so it calls ctags with 
 The `ctags configuration for solidity`_ consisted of two parts:
 
 One labeled ``vim ~/.ctags``:
+
 .. code::
 
     --langdef=Solidity
@@ -106,6 +107,7 @@ One labeled ``vim ~/.ctags``:
     --regex-Solidity=/[ \t]*mapping[ \t]+\(([a-zA-Z0-9_]+)[ \t]*=>[ \t]*([a-zA-Z0-9_]+)\)[ \t]+([a-zA-Z0-9_]+)/\3 (\1=>\2)/m,mapping/
 
 And other labeled ``vim ~/.vimrc``:
+
 .. code::
 
     let g:tagbar_type_solidity = {
@@ -139,14 +141,66 @@ We could add a few lines to the latter to also instruct the plugin to pass parti
 
 ``\ 'ctagsargs': '-f - --options=/home/capu/.ctags',``: sets the arguments for ctags. ``-f -`` makes ctags output to stdout, which is necessary for the plugin to work.
 
-...And it works!: 
+...And it works!:
 
 .. image:: {static}/imgs/tagbar_working.png
 
-But this is not a *good* solution. The Right Thing To Do™ is to find what files does my version of ctags read for configurations and move the configurations there.
+But this is not a *good* solution. The Right Thing To Do™ is to find what files does my version of ctags read for configurations and move them there, so for the rest of the journey, this last addition to the ``.vimrc`` is not present.
+
+--------------
+The brainfart
+--------------
+To find out where my version of ctags reads configurations, I could've read the README or the man page, both of which clearly explain what are the differences between universal-ctags (what I use) and exhuberant ctags (its predecessor which is probably what shuangjj uses), and which files it sources.
+But I searched on the intertubes instead, and ended up reading an `outdated issue`_, which suggested that universal-ctags reads the ``~/.u-ctags/`` directory for settings files.
+
+But after moving the file there, it still didn't work. In the moment I had two options:
+
+- Reading the source code for universal-ctags and figure out which files are opened
+
+- Intercept the system calls for opening files when ctags runs, hoping to see the path where it tries to open them.
+
+The latter seemed more interesting, and so I tried, filtering for `open` syscalls only, because I figured it would produce a lot of output:
+
+.. code::
+
+    [~/tmp/metacoin-box, master+1]: strace -e trace=open ctags contracts/Migrations.sol                                    <<<
+    --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=30777, si_uid=1001, si_status=0, si_utime=0, si_stime=0} ---
+    +++ exited with 0 +++
+
+So it seems there are no ``open`` syscalls? Let's try again without any filters:
+
+.. code::
+
+    [~/tmp/metacoin-box, master+1]: strace ctags contracts/Migrations.sol                                              <<<
+    execve("/usr/local/bin/ctags", ["ctags", "contracts/Migrations.sol"], 0x7ffc0172bd38 /* 77 vars */) = 0
+    brk(NULL)                               = 0x1cf5000
+    access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+    ...
+    openat(AT_FDCWD, "/home/capurro/.ctags.d", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = -1 ENOENT (No such file or directory)
+    openat(AT_FDCWD, ".ctags.d", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = -1 ENOENT (No such file or directory)
+    openat(AT_FDCWD, "ctags.d", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = -1 ENOENT (No such file or directory)
+    ...
+    rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1437aa3100}, NULL, 8) = 0
+    rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+    --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=31710, si_uid=1001, si_status=0, si_utime=0, si_stime=0} ---
+    exit_group(0)                           = ?
+    +++ exited with 0 +++
+
+After some manual filtering, I found the executable uses ``openat`` instead of ``open``, and tries to open ``/home/capurro/.ctags.d``. So I moved the configurations file to ``~/.ctags.d/main.ctags``. And it worked!
+
+.. code::
+
+    [~/tmp/metacoin-box, master+2]: ctags -f - contracts/MetaCoin.sol
+    MetaCoin        contracts/MetaCoin.sol  10;"    c
+    Transfer        contracts/MetaCoin.sol  13;"    e
+    balances (address=>uint)        contracts/MetaCoin.sol  11;"    m
+    getBalance      contracts/MetaCoin.sol  31;"    f
+    getBalanceInEth contracts/MetaCoin.sol  27;"    f
+    sendCoin        contracts/MetaCoin.sol  19;"
 
 .. _truffle's metacoin: https://www.trufflesuite.com/boxes/metacoin
 .. _vim-tagbar: https://github.com/majutsushi/tagbar
 .. _some regexes: `ctags configuration for solidity`_
 .. _ctags configuration for solidity: https://gist.github.com/shuangjj/ae816cacffce3a27e256de7c21312c50
 .. _ctags: https://en.wikipedia.org/wiki/Ctags
+.. _outdated issue: https://github.com/universal-ctags/ctags/pull/1519#issuecomment-319998393
