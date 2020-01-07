@@ -2,9 +2,8 @@
 Too dumb to read the documentation? Intercept system calls instead!
 ===================================================================
 :date: 2019-06-14 22:04
-:category: unix
+:category: unix debugging
 :author: capu
-:status: draft
 :summary: Join me in this brainfarting journey
 
 -------
@@ -12,14 +11,14 @@ Context
 -------
 Let's start this one off with a screenshot:
 
-.. image:: {static}/imgs/time_spent_learning_a_language.png
+.. image:: {static}/too-dumb-to-read-the-documentation-intercept-system-calls-instead/time_spent_learning_a_language.png
   :alt: a pie-chart captioned "Time spent when learning a new programming language" in which a minuscule portion is "Actually learning the language" and the overwhelming remainder is "Customizing vim to become the perfect IDE for the specific language"
 
-Although I am tempted to say vIm Is NoT aN IdE, and rant about how you need little more than a good Language Server filling your omnifunc and an updated tags file to edit proficiently, it can totally be a hour black hole even just to get the two aforementioned things to work, as we'll soon see.
+Although I am tempted to say vIm Is NoT aN IdE, and rant about how you need little more than a good Language Server filling your omnifunc and an updated tags file to edit proficiently, it can totally be a man-hour black hole even just to get the two aforementioned things to work, as we'll soon see.
 
 So, the journey begins with me spending more time writing solidity at work, when I was navigating a smart contract's code (I'll use `truffle's metacoin`_ for this example) and opened `vim-tagbar`_ expecting to see a summary of its functions, variables, etcetera:
 
-.. image:: {static}/imgs/tagbar_not_working.png
+.. image:: {static}/too-dumb-to-read-the-documentation-intercept-system-calls-instead/tagbar_not_working.png
   :alt: a screenshot of vim with vim-tagbar open, but the tagbar is empty
 
 And it was empty! On a clearly non-empty contract!
@@ -27,10 +26,10 @@ And it was empty! On a clearly non-empty contract!
 If you are not familiar with the aforementioned plugin, it's really simple: when invoking a command, it opens a vertical split with the definitions of the current file. |br|
 For example, here is the plugin working correctly on an example Java file:
 
-.. image:: {static}/imgs/tagbar_java_example.png
+.. image:: {static}/too-dumb-to-read-the-documentation-intercept-system-calls-instead/tagbar_java_example.png
   :alt: a screenshot of vim with tagbar open and working on an example Java class
 
-It even lists the fields in categories and with UML-like signs so you can know what is private, protected or public! And of course this listing is foldable with vim's default keybinidngs (see ``:help folding``).
+It even lists the fields in categories and with UML-like signs so you can know what is private, protected or public! And of course this listing is foldable with vim's default keybinidings (see ``:help folding``).
 
 How vim-tagbar and ctags work
 ------------------------------
@@ -46,17 +45,18 @@ Since the ``tags`` file is sorted by the definition names, and not the files the
 The problem
 ------------
 
-After checking that the tagbar is being displayed correctly for many other languages, it was evident that the problem was specific to solidity source code. |br|
-And it kind of makes sense, since it's a rather new language. But this shows the problem is not in the plugin itself.
+After checking that the tagbar was being displayed correctly for many other languages, it was evident that the problem was specific to solidity source code. |br|
+And it kind of makes sense, since it's a rather new language. But this showed the problem was not in the plugin itself.
 
-After some duckduckgo-ing, I found Someone On The Internet  who wrote `some regexes`_ which could be used to extend ctags (nice!) and add support for Solidity, alongside with some settings for vim-tagbar so it can differentiate between events, classes, methods, etcetera.
+After some duckduckgo-ing, I found Someone On The Internet  who wrote `some regexes`_ which could be used to extend ctags (nice!) and add support for solidity, alongside with some settings for vim-tagbar so it can differentiate between events, classes, methods, etcetera.
 
 These regexes should be added into one of ctags' configuration files ``~/.ctags``, and then they'd be used by the program to parse the source files searching for functions, identifiers and the like.
 
-I create the file, try to open the tagbar again, and... it's still empty.
+I created the file, try to open the tagbar again, and... it was empty.
 
 Running ctags on the file produced an empty (well, not empty, but only comments) tags file:
-code::
+
+.. code-block:: text
 
     [~/tmp/metacoin-box, master, 60s]: ctags contracts/MetaCoin.sol
     [~/tmp/metacoin-box, master+1]: cat tags
@@ -68,9 +68,9 @@ code::
     !_TAG_PROGRAM_URL       https://ctags.io/       /official site/
     !_TAG_PROGRAM_VERSION   0.0.0   /248cffc9/
 
-...but if I manually tell it to read options from the aforementined file, it generates the tags as expected:
+...but if I manually told it to read options from the aforementined file, it generated the tags as expected:
 
-.. code::
+.. code-block:: text
 
     [~/tmp/metacoin-box, 1, master+1]: ctags  --options=${HOME}/.ctags contracts/MetaCoin.sol
     [~/tmp/metacoin-box, master+1]: cat tags
@@ -90,12 +90,12 @@ code::
 
 So the problem seems to be that my version of ctags doesn't use the same configuration files as the version used by shuangjj (the regexes' author).
 
-Just as a sanity check, lets try to configure the plugin so it calls ctags with the ``--options`` flag.
+Just as a sanity check, I tried to configure the plugin so it called ctags with the ``--options`` flag.
 The `ctags configuration for solidity`_ consisted of two parts:
 
 One labeled ``vim ~/.ctags``:
 
-.. code::
+.. code-block:: text
 
     --langdef=Solidity
     --langmap=Solidity:.sol
@@ -108,7 +108,7 @@ One labeled ``vim ~/.ctags``:
 
 And other labeled ``vim ~/.vimrc``:
 
-.. code::
+.. code-block:: text
 
     let g:tagbar_type_solidity = {
         \ 'ctagstype': 'solidity',
@@ -123,9 +123,9 @@ And other labeled ``vim ~/.vimrc``:
 
 The first one is the proper regexes for extending ctags, and the latter are the configurations for vim-tagbar to understand what ctags generates.
 
-We could add a few lines to the latter to also instruct the plugin to pass particular arguments to ctags.
+I added a few lines to the latter to also instruct the plugin to pass some arguments to ctags.
 
-.. code::
+.. code-block:: vimscript
 
     let g:tagbar_type_solidity = {
         \ 'ctagstype': 'solidity',
@@ -141,9 +141,10 @@ We could add a few lines to the latter to also instruct the plugin to pass parti
 
 ``\ 'ctagsargs': '-f - --options=/home/capu/.ctags',``: sets the arguments for ctags. ``-f -`` makes ctags output to stdout, which is necessary for the plugin to work.
 
-...And it works!:
+...And it worked!:
 
-.. image:: {static}/imgs/tagbar_working.png
+.. image:: {static}/too-dumb-to-read-the-documentation-intercept-system-calls-instead/tagbar_working.png
+  :alt: tagbar working for the solidity file
 
 But this is not a *good* solution. The Right Thing To Do™ is to find what files does my version of ctags read for configurations and move them there, so for the rest of the journey, this last addition to the ``.vimrc`` is not present.
 
@@ -161,7 +162,7 @@ But after moving the file there, it still didn't work. In the moment I had two o
 
 The latter seemed more interesting, and so I tried, filtering for `open` syscalls only, because I figured it would produce a lot of output:
 
-.. code::
+.. code-block:: text
 
     [~/tmp/metacoin-box, master+1]: strace -e trace=open ctags contracts/Migrations.sol                                    <<<
     --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=30777, si_uid=1001, si_status=0, si_utime=0, si_stime=0} ---
@@ -169,7 +170,7 @@ The latter seemed more interesting, and so I tried, filtering for `open` syscall
 
 So it seems there are no ``open`` syscalls? Let's try again without any filters:
 
-.. code::
+.. code-block:: text
 
     [~/tmp/metacoin-box, master+1]: strace ctags contracts/Migrations.sol                                              <<<
     execve("/usr/local/bin/ctags", ["ctags", "contracts/Migrations.sol"], 0x7ffc0172bd38 /* 77 vars */) = 0
@@ -188,7 +189,7 @@ So it seems there are no ``open`` syscalls? Let's try again without any filters:
 
 After some manual filtering, I found the executable uses ``openat`` instead of ``open``, and tries to open ``/home/capurro/.ctags.d``. So I moved the configurations file to ``~/.ctags.d/main.ctags``. And it worked!
 
-.. code::
+.. code-block:: text
 
     [~/tmp/metacoin-box, master+2]: ctags -f - contracts/MetaCoin.sol
     MetaCoin        contracts/MetaCoin.sol  10;"    c
