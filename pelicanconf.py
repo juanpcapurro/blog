@@ -42,3 +42,6 @@ PLUGINS = ['pelican-global-rst-include']
 
 # idk, this seems to be relative to the context directory
 RST_GLOBAL_INCLUDES =['../globals/globals.rst']
+
+STATIC_PATHS = ['extra/favicon.ico']
+EXTRA_PATH_METADATA = {'extra/favicon.ico': {'path': 'favicon.ico'},}
