@@ -2,7 +2,7 @@
 I made (another) hip pack!
 ==========================
 :date: 2020-05-2
-:category: sewing cycling
+:tags: sewing, cycling
 :author: capu
 :summary: They're three actually. Come see my process!
 

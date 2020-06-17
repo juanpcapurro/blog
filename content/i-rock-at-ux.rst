@@ -2,7 +2,7 @@
 I rock at UX design
 ====================
 :date: 2019-06-14 22:04
-:category: unix ux
+:tags: unix, ux
 :author: capu
 :status: draft
 :summary: How can I tell? because I fucked up my own behaviour

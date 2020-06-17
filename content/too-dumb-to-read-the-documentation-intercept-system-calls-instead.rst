@@ -2,7 +2,7 @@
 Too dumb to read the documentation? Intercept system calls instead!
 ===================================================================
 :date: 2019-06-14 22:04
-:category: unix debugging
+:tags: unix, debugging
 :author: capu
 :summary: Join me in this brainfarting journey
 
