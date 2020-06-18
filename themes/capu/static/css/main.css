@@ -142,8 +142,16 @@ blockquote {
   vertical-align: bottom;
 }
 
-.entry-content img {
+.entry-content img, .entry-content video {
   padding: 1em 2em;
+  display: block;
+  margin: auto;
+  background-color: #e0e0e0;
+  max-width: 85%;
+}
+
+.entry-content video {
+  padding: 1em;
   display: block;
   margin: auto;
   background-color: #e0e0e0;

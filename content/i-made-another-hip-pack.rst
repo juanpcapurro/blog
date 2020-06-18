@@ -165,7 +165,7 @@ The process is as follows:
 - Clip each one of the rectangles to one of the copies of the sketch.
 - Export the results of the previous steps as PNG.
 
-.. image:: {static}/i-made-another-hip-pack/inkscape.webm
+.. video:: {static}/i-made-another-hip-pack/inkscape.webm
 
 **Note 1**: While this works, I don't feel like this is an ideal solution by a long shot.
 For example, if one of the rectangles overflows the limits of the sketch, the resulting image will be smaller than the others, and will be printed out of scale.
