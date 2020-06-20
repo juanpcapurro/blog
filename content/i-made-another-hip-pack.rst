@@ -238,6 +238,12 @@ It was pretty refreshing using new software superficially (not *deeply* research
 
 I'll certainly keep trying new approaches to bags and other gear. I still have like three meters of cordura left 🙃.
 
+Update 1
+--------
+I forgot to actually share the files so you can make the same hip bag or fork it ✨
+
+Here's `the repo <https://github.com/juanpcapurro/sewing>`_
+
 .. _her instagram: https://www.instagram.com/pepi.dibuja/
 .. _reddit post: https://old.reddit.com/r/myog/comments/fr8h6j/diy_hip_bag_with_the_last_bits_of_cordura_i_had/
 .. _old edition of roadrunner's hip bag: https://www.youtube.com/watch?v=_t6L3E88Utg
