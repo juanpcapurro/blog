@@ -4,7 +4,7 @@ Why reStructuredText?
 :date: 2020-06-20
 :tags: capu-tries-tech
 :author: capu
-:summary: content warning: extensibility
+:summary: Content warning: extensibility
 
 I'll be honest with you, I don't have all that much experience with the Python way of doing things, and I'm fairly new at this reStructuredText thing, but when writing my `previous blog post`_ I had an issue that made me understand why `Eric Holscher <https://www.ericholscher.com/>`_ loves it `so much <https://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/>`_.
 
@@ -58,6 +58,6 @@ This enables me to create my own reStructuredText directive! I currently have no
 
 Also, here's `the actual commit <https://github.com/juanpcapurro/blog/commit/e7c8c95a3d2dac9fd14cdb698534728cc78752c1>`_ where I implemented this changes.
 
-...I should probably add a link to download the file if the browser doesn't support video. Perhaps for the next time I use a video.
+...I should probably add a link to download the file if the browser doesn't support video. Perhaps for the next time I add one.
 
 .. _previous blog post: {filename}/i-made-another-hip-pack.rst
