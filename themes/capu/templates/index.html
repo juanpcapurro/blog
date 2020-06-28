@@ -8,7 +8,7 @@
 <ul class="post-list styleless-list">
 {% for article in articles %}
   <li>
-     <h2 class="article-title" ><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> 
+     <h2 class="article-title" ><a class="no-decoration" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> 
     <div class="author-and-date">
       <span class="publish-time" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </span>
     </div>

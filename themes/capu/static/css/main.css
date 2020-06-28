@@ -29,12 +29,8 @@ h1 {
 p {
   line-height: 150%;
 }
-a{
+.no-decoration {
   text-decoration: none;
-}
-/* it's hard to see the links in regular text otherwise*/
-p a {
-  text-decoration: underline;
 }
 a:hover{
   background-color: #eee;
@@ -75,6 +71,7 @@ blockquote {
   align-items: center;
 }
 .main-header a{
+  text-decoration: none;
   color: #272727;
 }
 .site-title{
