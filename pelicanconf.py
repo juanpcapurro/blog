@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import random
+
+JINJA_FILTERS = { 'pick_reccomendations': lambda array, article: random.sample([i for i in array if i.title != article.title], min(len(array), 3)) }
 
 AUTHOR = 'capu'
 SITENAME = "capu's blog"
