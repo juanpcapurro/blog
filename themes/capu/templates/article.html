@@ -63,14 +63,15 @@
   <div class="entry-content">
     {{ article.content }}
   </div><!-- /.entry-content -->
-  <hr/>
-  <h3> Also on this blog: </h3>
-  <ul>
-    {% for reccomendation in articles | pick_reccomendations(article) %}
-      <li>
-        <a href="{{ SITEURL }}/{{ reccomendation.url }}">{{ reccomendation.title }}</a> 
-      </li>
-    {% endfor %}
-  </ul>
 </section>
+<hr />
+<h3> Also on this blog: </h3>
+<ul>
+  {% for reccomendation in articles | pick_reccomendations(article) %}
+    <li>
+      <a href="{{ SITEURL }}/{{ reccomendation.url }}">{{ reccomendation.title }}</a> 
+    </li>
+  {% endfor %}
+</ul>
+<a href="{{ SITEURL }}">Back to article list</a> 
 {% endblock %}
