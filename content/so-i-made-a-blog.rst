@@ -45,6 +45,14 @@ TIL RSS was not meant to contain a full article (after all, it was meant for *sy
 
 So instead of modifying this behaviour I'll provide both RSS and Atom feeds. If you want to see the whole article in your reader, use the Atom feed (It'll be the only one visually linked anyway).
 
+Update 4:
+---------
+Fuck Atom. It tries to do syndication and distribution, RSS is just simpler and if you want to have the whole article in your reader, use a reader with offline support.
+Also, I don't fully understand what readers do when I update an article and I want to minimize the chances of someone reading outdated articles.
+
+If you were following me via Atom: I love you. Thanks for following me.
+But I broke your reader. Use the new RSS url at the bottom of this page.
+
 .. _/dev/random theme: https://github.com/22decembre/dev-random3
 .. _alephsecurity: https://alephsecurity.com/
 .. _Eric Holscher's post: https://www.ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/
