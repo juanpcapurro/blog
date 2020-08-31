@@ -155,9 +155,7 @@ tt {
 .highlight pre {
   padding: 0.5em;
   background-color: #efefef;
-  word-break: break-all;
-  word-wrap: break-word;
-  white-space: pre-wrap;
+  overflow: auto;
 }
 
 .allcaps{
