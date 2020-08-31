@@ -157,7 +157,6 @@ tt {
 .highlight pre {
   padding: 0.5em;
   background-color: #efefef;
-  white-space: pre-wrap;
   overflow: auto;
 }
 
