@@ -3,12 +3,26 @@
 from __future__ import unicode_literals
 import random
 
-JINJA_FILTERS = { 'pick_reccomendations': lambda array, article: random.sample([i for i in array if i.title != article.title], min(len(array), 3)) }
+JINJA_FILTERS = { \
+                 'pick_reccomendations': lambda array, article: random.sample([i for i in array if i.title != article.title], min(len(array), 3)),\
+                 'pick_subtitle': lambda subtitles: random.choice(subtitles)\
+                 }
 
 AUTHOR = 'capu'
 SITENAME = "capu's blog"
-SITEURL = 'http://localhost:8000'
-SITESUBTITLE = 'I\'m probably over-engineering this'
+SITEURL = 'http://127.0.0.1:8000'
+SITESUBTITLE = ['I\'m probably over-engineering this',\
+                'You can\'t downvote me here',\
+                'También en castellano, wachin',\
+                'We have nothing to lose but our OSDE 210',\
+                'Alta paja agregar comentarios, mandame un mail',\
+                'Cookie free! NGINX logs your IP, tho',
+                'Looks just as good in w3m',\
+                'Software is evil unless you can fork it',\
+                'Content Warning: unsufferable hipsters',\
+                'Hosted on the Other People\'s Computers ☁',\
+                'Hack the planet! (it\'s a reference)',\
+                'No backups. Can\'t restore. Don\'t want to either.']
 
 PATH = 'content'
 STATIC_PATHS = ['static']
