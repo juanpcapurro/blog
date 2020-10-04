@@ -28,7 +28,7 @@ Este bolso tiene las correas que agarran a la parte exterior, abrazando el conte
 
 .. image:: {static}/hice-un-bolsito-pero-para-la-espalda/atras.jpg
 
-Y cómo se siente en la espalda? Tengo la sensación de que si lo cargo mucho no va a mantenerse bien sobre mi espalda por ser tan grande. Pero es una sensación mucho mas bonita andar con esto en la espalda en bici que con una mochila, principalmente porque se siente como si llevara la carga apoyada balanceándose sobre mi espalda (sobre todo al andar en los Drops) y las correas nomas ayudaran a que se mantuviera así.
+Y cómo se siente en la espalda? Tengo la sensación de que si lo cargo mucho no va a mantenerse bien sobre mi espalda por ser tan grande. Pero es una sensación mucho mas bonita andar con esto en la espalda en bici que con una mochila, principalmente porque se siente como si llevara la carga apoyada balanceándose sobre mi espalda (sobre todo al andar en los drops) y las correas nomas ayudaran a que se mantuviera así.
 
 Por otro lado, se movía un poco mas de lo que me siento cómodo al pasar de estar apoyado sobre mi espalda andando en bici a estar colgando de las correas al caminar. Quizás es cosa de acostumbrarse. Cuando me bajo de la bici siempre estoy concentrado en salir por atrás del asiento como un true fixie bro y no pegarle a la heladera de algún kiosco, así que no tengo mucho tiempo de preocuparme por eso de todas formas.
 
@@ -77,6 +77,10 @@ Voy entendiendo más el valor de métodos más fancy de ingeniería inversa, per
 Ahora tuve un ataque de no querer llevar el Ulock en el cuadro así que quizás haga primero otro bolsito a la cadera más (probando usar la tela que use de pizarra en este como liner) y después vuelva a intentar otra iteración.
 
 En fin, no tengo una página de contacto para tirar un hiperlink re pistero pero tampoco una re audiencia, así que si tenes algún comentario probablemente sabés por donde ubicarme.
+
+Update 1
+--------
+Me olvidé de linkear a los patrones, los podés encontrar en `mi github <https://github.com/juanpcapurro/sewing/tree/master/messenger-bag>`_. En particular la versión con la espalda grande de este bolso es la revisión ``54ea627``. En el futuro seguramente los modifique para hacerlo mas acorde a mi espalda así que lo que esté en ``master`` no va a reflejar este blogpost.
 
 .. [1] Si, un envio internacional. Ni siquiera me ahorre el quilombo de la logistica.
 
