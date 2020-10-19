@@ -62,6 +62,7 @@ blockquote {
 }
 
 .main-header{
+  margin-bottom: 1em;
   display:flex;
   justify-content: space-between;
   align-items: center;
@@ -79,7 +80,7 @@ blockquote {
 }
 .site-subtitle{
   font-style: italic;
-  margin-left: 10px;
+  margin-left: 0.5rem;
   margin-top: 0.5rem;
 }
 .navigation-section{
@@ -95,7 +96,6 @@ blockquote {
 }
 .post-list{
   margin: 0px;
-  margin-left: 1em;
   padding-inline-start: 0px;
   -webkit-padding-start: 0px;
 }
