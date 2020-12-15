@@ -9,7 +9,15 @@
   <li>
      <h2 class="article-title" ><a class="no-decoration" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> 
     <div class="author-and-date">
-      <span class="publish-time" datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </span>
+        <time class="published" datetime="{{ article.date.isoformat() }}">
+          {{ article.locale_date }}
+        </time>
+      </span>
+      {% if article.modified %}
+        <time class="modified" datetime="{{ article.modified.isoformat() }}">
+          (Last modified {{ article.locale_modified }})
+        </time>
+      {% endif %}
     </div>
     <!-- /.post-info -->
     {% if article.summary %}
