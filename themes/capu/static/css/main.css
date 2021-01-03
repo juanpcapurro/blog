@@ -135,7 +135,7 @@ blockquote {
   vertical-align: bottom;
 }
 
-.entry-content img, .entry-content video {
+.entry-content img, .entry-content video, .page-content img, .page-content video {
   padding: 1em 5%;
   display: block;
   margin: auto;
