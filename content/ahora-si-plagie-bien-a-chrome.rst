@@ -2,7 +2,7 @@
 Ahora si plagié bien a Chrome
 ====================================
 :date: 2020-11-24
-:tags: sewing cycling
+:tags: sewing, cycling
 :author: capu
 :summary: Mientras mas los copio mejor es el bloso, es injusto esto
 
