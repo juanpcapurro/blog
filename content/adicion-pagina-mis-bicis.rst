@@ -1,11 +1,10 @@
 =====================================
 Mirá, hice una página para mis bicis
 =====================================
-:date: 2021-01-05
+:date: 2021-01-06
 :tags: cycling
 :author: capu
 :summary: Pedalroom quién te conoce papá
-:status: draft
 
 En el header de este sitio ahora hay un link a `everything else <{filename}/pages/everything-else-es.rst>`_
 

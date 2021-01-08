@@ -40,7 +40,6 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 SOCIAL = ( ('github', 'http://github.com/juanpcapurro'),
-         ('twitter', 'http://twitter.com/cuddle_lord'),
          ('hire me', 'http://hire.capu.tech/') )
 
 # Social widget

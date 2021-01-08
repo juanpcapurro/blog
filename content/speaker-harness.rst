@@ -3,8 +3,7 @@ Hack rápido: arnés para llevar un parlante en el hombro
 =======================================================
 :date: 2021-01-08
 :tags: cycling, sewing
-:summary: 
-:status: draft
+:summary: 15 minutos de costura para poder andar en bici escuchando al pity para mi fue alto ofertón
 
 'Pero por qué querés llevar un parlante en el hombro?', te escucho preguntar. La idea es poder escuchar musiquita cuando ando en bici, sin usar auriculares porque eso es estúpidamente peligroso.
 
