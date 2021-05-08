@@ -24,8 +24,7 @@ Pero no considero que esté *mal*, onda, aprender copiando me parece re noble. Y
 
 Preguntas que todavía tengo
 ===========================
-
-- Es una buena idea el liner flotante? Me permitió hacer una terminación más prolija al ribeteado, aunque dudo un poco de la utilidad que me pueda dar. Quizás con un liner mas rígido que el ribeteado agarre el liner le da mas estructura al bolso, lo que es importante porque hay correas que se agarran de ahi.
+- Es una buena idea el liner flotante? Me permitió hacer una terminación más prolija al ribeteado, aunque dudo un poco de la utilidad que me pueda dar. Quizás si uso un liner mas rígido, que el ribeteado agarre el liner le da mas estructura al bolso, cosa importante porque hay correas que se agarran de ahi.
 
 - Cuál es el ángulo al que quiero usar el bolso?  Actualmente el bolso tiene un diseño intermedio entre estas alternativas, dado que la correa principal sale un poco horizontal (35 grados de la horizontal) en el hombro y se une a 60 grados de la horizontal en la axila.
     - Quiero que vaya vertical sobre mi espalda, colgando de la correa principal? Para esto uso la correa principal suelta y la secundaria ajustada, y para incorporarlo al diseño del bolso deberia disminuir el angulo de la correa en el hombro y aumentarlo en la axila

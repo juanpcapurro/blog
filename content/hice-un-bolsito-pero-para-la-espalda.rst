@@ -2,7 +2,7 @@
 Hice un bolsito pero para la espalda
 ====================================
 :date: 2020-09-29
-:tags: sewing
+:tags: sewing, cycling
 :author: capu
 :summary: Hoy me di cuenta que no le debo consistencia a nadie y blogueo en castellano
 
