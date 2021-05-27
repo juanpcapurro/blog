@@ -133,8 +133,6 @@ Me gustaría armarme una bici de touring con la transmisión shimano alivio prá
 
 Idealmente me gustaría mandar a hacer (o conseguir, si es que eso se puede) un cuadro de acero (¿con couplers?) para 700c que le entren neumáticos de hasta 50mm, pero si mi vida me pide una bici con freewheel más rapido de lo que espero podría mandarle un Fad Nottingham mientras tanto.
 
-Otra cosa que estoy viendo de armarme es una fixie con cuadro de acero, probablemente menos fancy, que tenga permanentemente el rack y un manubrio plano puesto, y una relación más corta que mi bici actual, para tener una bici para ir lejos y rápido y otra para chillear, hacer truquitos y llevar memes grandes.
-
 .. [1] Fue antes del último viaje, eso hace las bajadas aún más irresponsables.
 
 
