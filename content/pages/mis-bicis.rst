@@ -86,7 +86,6 @@ hacía mal a la psiquis.
 
 Fotos
 -----
-
 .. image:: {static}/pages/mis-bicis/IMG_20201116_160330.jpg
 
 Como se la vendí a Enzo, con un riser y dos frenos

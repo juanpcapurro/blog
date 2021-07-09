@@ -3,6 +3,7 @@ Mierda que soy malo con las fotos
 =================================
 :date: 2021-04-22
 :tags: sewing, cycling
+:status: draft
 :author: capu
 :summary: Oportunidad para roastearme constructivamente
 

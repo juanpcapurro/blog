@@ -210,7 +210,6 @@ A puentes
 
 Y a almorzar a la placita, cuando era legal.
 
-
 .. [1] Por algún motivo es re común que vengan con platos de 48t las palancas,
    que es un número horrendo para elegir considerando que está entre 47 (primo)
    y 49 (divisible solo por 7), que son opciones que terminan dando muchos más
