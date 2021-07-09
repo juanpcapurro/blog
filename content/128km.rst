@@ -1,0 +1,139 @@
+==================================================
+Hice 118km en un dia y mis rodillas se lo bancaron
+==================================================
+:date: 2021-07-05
+:tags: cycling
+:author: capu
+:summary: Hacía mucho que no lograba algo
+
+Me salió el turno para vacunarme este viernes en Los Toldos, estando yo en
+Junin, y consideré que sería una buena oportunidad para hacer mi primer salida
+de más de 100km.
+
+El turno era a las 17hs, asi que avisé en el laburo que me iba a desconectar
+alrededor de las 14hs para ir por la RP65, que es insegura pero no clasifica
+legalmente como suicidio de día, y luego de vacunarme volver por la RP65 hasta
+que se me acabara la luz, y de ahi desviarme either en zavalia o un poco antes
+por caminos de tierra hacia la RP46, que si me siento comodo haciendo de noche.
+
+.. image:: {static}/128km/IMG_20210702_150825.jpg
+
+Me resulta cuqui que el estado se preocupe por el bienestar de los cuices. O
+quizas es por los carpinchos, que supongo que son peligrosos para la gente en
+auto. Voy a elegir pensar que es lo primero.
+
+.. image:: {static}/128km/IMG_20210702_160139.jpg
+
+Paré a descansar un rato en Zavalía.
+
+.. image:: {static}/128km/recorrido.png
+
+Por suerte llegué a tiempo a vacunarme y sali bastante rápido. Pero una
+combinacion de mi masculinidad y mis guantes no me dejó ver el mapa apenas me
+desvié de zavalía, y terminé haciendo un par de kms de más.
+
+Si bien estoy re contento de haberlo podido hacer y tener más confianza en mi
+combinación cuerpo+bici en consecuencia, no la pasé muy bien:
+
+- Sobre la ruta 65 me tuve que tirar a la banquina como 25 veces.
+  Hubieron un par de conductores hiper pelotudos que intentaron pasarme al
+  mismo tiempo que venia otro auto de frente, en una situacion re evitable, y
+  me pasaron haciendo finito y tocando bocina. Bobos. Tipo habia espacio para
+  pasar despues, cuanto mucho ibas a sumar 6s a tu tiempo de viaje entre junin
+  y zavalia en tu volkswagen suran.
+- Entre zavalia y la ruta 46 fui odiandome a mi mismo por ser tan bobo de
+  perderme.
+- Cuando llegué a la ruta 46 y hasta que pasé morse estuve pensando si
+  realmente iba a poder llegar. Me quedaban muchos kms por delante, ya me
+  dolían los isquiones, y no sabia si la ruta iba a ser segura. Con los
+  primeros autos que me pasaron me di cuenta de que es muy muy dificil estimar
+  la distancia a la que viene el auto de atrás de noche, y me tiré a la
+  banquina muy antes o innecesariamente. Aún así me sentí más cómodo que en la
+  ruta 65 de día.
+- A partir del kilometro 70 ya estaba muy cansado como para divertirme, las
+  ganas de simplemente dormir eran cada vez mas fuertes, y la idea de no llegar
+  muy tarde me desmoralizaba un toque. Si hubiera estado en un *tour*, habría
+  armado campamento en los alrededores de obrien, creo.
+  
+Al pasar morse y ya estar en lugares conocidos empecé a estar mejor
+anímicamente, y lidiar con solo estar agotado fisicamente fue mucho mas
+manejable.
+
+En cuanto a los buenos memes:
+
+- Mis rodillas estuvieron de diez. No me dolió tampoco ninguna cosa que me
+  preocupe. Porque está el dolor de 'ah me duele la cosa', no se, cuando volves
+  al gimnasio después de un año y quedas todo roto, pero es algo que te impide
+  hacer cosas *hoy*, y no hay realmente un miedo de que hayas llegado a un
+  limite de tu cuerpo, o que esa cosa que te gusta, que es crucial para tu modo
+  de vida o aunque sea para tu identidad, no la puedas hacer. Los dolores en
+  músculos y tejidos blandos que no se bancan la gira como los isquiones entran
+  en la primer categoría, y las articulaciones, tendones y nervios en la segunda.
+- No rompí nada de la bici.
+- Ningun camión me convirtió en un tubo de pasta de dientes humano.
+- No me encontré con tramos largos insufribles de arena. Solo tramos cortos
+  insufribles de arena.
+- En un momento estaba chilleando al lado de la ruta 46 y paro un chabon en una
+  camioneta y me preguntó si estaba todo bien. 10/10 buena gente. Está bueno
+  saber que si te pasa algo medio que eventualmente va a caer un rando que te
+  ayude.
+
+El equipo
+=========
+- Primero, y mas importante, es que cambie el piñon de mi `chill machine
+  <{filename}/pages/mis-bicis.rst#the-chill-machine>`_, antes de 17 dientes, por
+  uno de 19, que me permite tener una cadencia que no mata mis rodillas a las
+  velocidades que usualmente manejo en esta zona (18-25 km/h)
+- Elegí ir con zapatillas en lugar de botas, dado que no iba a llover y
+  comprobé en una salida anterior que podía estar cómodo en frio que iba a
+  hacer con mis sneakers y dos pares de medias. Salí con solo las medias de
+  *liner* puestas y tipo 7 de la tarde me puse las de abrigo.
+- Llevé además de mi campera verde impermeable mi buzo de vagabundo. Nunca lo
+  llegué a usar debajo de la campera andando en bici, incluso los dias de 0-5C,
+  pero si algo hacía que deje de pedalear entrada la noche, iba a agradecer un
+  monton tenerlo.
+- Una muda de ropa (remera+boxer+medias) en sus moralmente correctos rollitos.
+- Muchos snacks:
+    - Dos alfajores de nuez con la misma seccion que mis brazos.
+    - Tres barritas de cereal, de las cuales solo comi una porque las otras dos
+      las metí en el fondo de la dry bag como un boludo.
+    - ~200gr de mani, de lo que comí la mitad
+- Una botella de 1.5L de agua, que rellené en Los Toldos y llegué medio justo.
+- Todas estas cosas las llevé en un drybag o sueltas en el rack delantero de mi
+  bici. Resulta que si llevo un drybag solo, con las camaras bien fisuras que
+  tengo va agarrado bárbaro, pero si agarro dos cosas se empiezan a deslizar
+  entre si y es un mal meme. Además la drybag es bastante poco practica para
+  sacar cosas durante el recorrido, y completamente inaccesible al andar.
+- Pantalones normales. No creo que mi destino hubiera sido distinto por usar
+  calzas.
+
+Las medidas de seguridad
+========================
+- Las herramientas que siempre llevo. Medio que no habia mucho que se pudiera
+  romper en la bici que me detuviera, el limitante era yo 🙃
+- Creo que es obvio, pero las luces polenta + luces de repuesto son
+  imprescindibles.
+- El abrigo.
+- La posibilidad de decir 'xd' y volverme a dormir a lo de mis viejos en
+  Baigorrita, haciendo *solo* 80km.
+- Habia arreglado con mi viejo y con Tebo, un amigo de junin, ambos con auto,
+  si me podian ir a buscar si la empezaba a pasar muy mal.
+- Probé la configuracion de ropa que iba a usar en salidas mas cortas en el
+  mismo clima. Sabía que salvo por las zapatillas, también iba a poder pasarla
+  no-tan-mal si llovía, por una salida anterior.
+- No llevé mapas en papel porque ya conozco la zona, tenia estudiada la ruta, y
+  si mi telefono moría siempre podía llegar a una ruta y decir xd
+- Miré el pronostico y vi que las chances de que llueva ese dia o el siguiente
+  eran ~0.
+
+No es muy especial todo esto, y es un poquito overkill estando en el bioma mas
+amigable con la vida humana en una zona muy poblada, que es ademas el patio de
+la casa de mis papis with extra steps, pero creo que es importante dar
+visibilidad a qué hay detras de estas salidas y cómo mitigo los riesgos para
+que otres puedan hacer lo mismo y también para que no me llamen de vuelta a
+parques nacionales.
+
+En fin, ya es lunes y todavia no volví a meter otra salida, y medio que para
+poder ir aumentando la distancia que puedo hacer sin pasarla mal debería andar
+seguido. Me voy a buscar unos senderitos y quizas probar como levantar un
+refugio con mi super no-fancy toldo y seguramente muy pocas estacas, bye ✨.
