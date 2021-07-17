@@ -25,7 +25,6 @@ SITESUBTITLE = ['I\'m probably over-engineering this',\
                 'No backups. Can\'t restore. Don\'t want to either.']
 
 PATH = 'content'
-STATIC_PATHS = ['static']
 
 TIMEZONE = 'America/Argentina/Buenos_Aires'
 
@@ -58,5 +57,5 @@ PLUGINS = ['pelican-global-rst-include','video']
 # idk, this seems to be relative to the context directory
 RST_GLOBAL_INCLUDES =['../globals/globals.rst']
 
-STATIC_PATHS = ['extra/favicon.ico']
-EXTRA_PATH_METADATA = {'extra/favicon.ico': {'path': 'favicon.ico'},}
+STATIC_PATHS = ['static']
+EXTRA_PATH_METADATA = {'static/favicon.ico': {'path': 'favicon.ico'},}
