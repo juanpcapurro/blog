@@ -58,8 +58,9 @@
     {{ article.content }}
   </div><!-- /.entry-content -->
 </section>
-<hr />
+  You can follow this blog via the <a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}">RSS feed</a> or join <a href="https://t.me/elblogdecapu">the telegram broadcast</a>
 <h3> Also on this blog: </h3>
+<hr />
 <ul>
   {% for reccomendation in articles | pick_reccomendations(article) %}
     <li>
