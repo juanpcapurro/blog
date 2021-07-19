@@ -5,6 +5,7 @@ Uh colgué en contarles, pero armé mi primer bici a pedido
 :tags: cycling
 :author: capu
 :summary: Fue para Gon, que ahora hasta sale de su casa y todo
+:featured_image: /gonzas-bike/IMG_20210130_122426.jpg
 
 Capu, ahora armás bici?
 =======================

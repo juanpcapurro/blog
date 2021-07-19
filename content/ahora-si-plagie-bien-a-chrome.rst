@@ -5,6 +5,7 @@ Ahora si plagié bien a Chrome
 :tags: sewing, cycling
 :author: capu
 :summary: Mientras mas los copio mejor es el bloso, es injusto esto
+:featured_image: /ahora-si-plagie-bien-a-chrome/what-it-can-fit.jpg
 
 .. image:: {static}/ahora-si-plagie-bien-a-chrome/what-it-can-fit.jpg
     :alt: el bolso junto a todos sus contenidos: un par de birras, un par de zapatillas, un candado, herramientas, una botella y un buzo

@@ -5,6 +5,7 @@ Guess who made another hip pack
 :tags: sewing
 :author: capu
 :summary: I ripped off Chrome's design even more this time.
+:featured_image: /guess-who-made-another-hip-pack/closed-on-ass.jpg
 
 I made this one with Seamly2d as well and the time spent prototyping is going down *fast*.
 

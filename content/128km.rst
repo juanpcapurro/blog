@@ -5,6 +5,7 @@ Hice 118km en un dia y mis rodillas se lo bancaron
 :tags: cycling, expedition
 :author: capu
 :summary: Hacía mucho que no lograba algo
+:featured_image: /128km/IMG_20210702_160139.jpg
 
 Me salió el turno para vacunarme este viernes en Los Toldos, estando yo en
 Junin, y consideré que sería una buena oportunidad para hacer mi primer salida

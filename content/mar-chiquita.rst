@@ -5,6 +5,7 @@ Salí a explorar y encontré mucha infraestructura
 :tags: cycling, expedition
 :author: capu
 :summary: Tambien animalitos
+:featured_image: /mar-chiquita/IMG_20210708_143740.jpg
 
 .. image:: {static}/mar-chiquita/recorrido.png
 

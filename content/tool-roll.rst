@@ -4,6 +4,7 @@ Qué llevo en mi roll de herramientas
 :date: 2021-01-02
 :tags: cycling, sewing
 :summary: Lo hice yo, mirá, es re cuqui.
+:featured_image: /tool-roll/IMG_20201129_175554.jpg
 
 Esto medio que empezó como una excusa pra usar la feature de internal path de seamly2d para especificar todas las features de un diseño (donde hay pliegues, donde van los velcros, etc), cosa que viene saliendo de 10
 

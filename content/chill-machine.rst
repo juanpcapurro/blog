@@ -5,6 +5,7 @@ Nueva bici: The Chill Machine
 :tags: cycling
 :author: capu
 :summary: Es rosa y muy bonita, veni, hay mucho amor y fotos mal frameadas
+:featured_image: /chill-machine/IMG_20210502_142447.jpg
 
 El hype
 =======

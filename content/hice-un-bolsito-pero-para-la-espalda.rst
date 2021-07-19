@@ -5,6 +5,7 @@ Hice un bolsito pero para la espalda
 :tags: sewing, cycling
 :author: capu
 :summary: Hoy me di cuenta que no le debo consistencia a nadie y blogueo en castellano
+:featured_image: /hice-un-bolsito-pero-para-la-espalda/frente-cerrado.jpg
 
 .. image:: {static}/hice-un-bolsito-pero-para-la-espalda/frente-cerrado.jpg
 

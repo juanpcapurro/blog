@@ -4,6 +4,7 @@ Update: otra iteración de hip bags
 :date: 2021-01-11
 :tags: cycling, sewing
 :summary: No es mucho una iteración si tiré al carajo todo y empecé de cero, pero bueno
+:featured_image: /hip-bag-version-whatever/photo_2021-01-03_22-15-16.jpg
 
 Iteración es un decir, porque es un diseño completamente distinto.
 

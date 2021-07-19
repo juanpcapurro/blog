@@ -5,6 +5,7 @@ Let's try Seamly2D
 :tags: sewing, capu-tries-tech
 :author: capu
 :summary: Let's hope I don't end up in suckless repositories again
+:featured_image: /lets-try-seamly-2d/tiled-pdf.png
 
 Today I have a very basic sewing project: I want to make a bag to hold some spare bike parts, since the current solution doesn't seem to be holding up well:
 

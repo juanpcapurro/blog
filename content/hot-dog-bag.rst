@@ -5,6 +5,7 @@ Amo tanto a este bar que diseñé un bolso para ir a buscar sus panchos
 :modified: 2020-12-14
 :tags: cycling, sewing
 :summary: E intenté que me noticeen, obvio
+:featured_image: /hot-dog-bag/IMG_20201129_174836.jpg
 
 .. code:: 
     

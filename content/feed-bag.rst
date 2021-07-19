@@ -4,6 +4,7 @@ Hice un bolsito al stem
 :date: 2020-12-13
 :tags: cycling, sewing
 :summary: Todo sea por no agarrar portacarmañolas al cuadro con abrazaderas
+:featured_image: /feed-bag/IMG_20201129_180238.jpg
 
 Hice hasta ahora dos intentos:
 

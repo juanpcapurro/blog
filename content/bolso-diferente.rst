@@ -5,6 +5,7 @@ Joven Porteño Crea Un Bolso Diferente
 :tags: sewing
 :author: capu
 :summary: \*le pega al bolso\* este chico malo puede llevar tantas bandejas de baos
+:featured_image: /bolso-diferente/side-baos.jpg
 
 Por el summary casi reescribo toda la cosa en inglés, que traducción más rancia.
 

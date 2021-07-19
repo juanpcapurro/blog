@@ -5,6 +5,7 @@ I made (another) hip pack!
 :tags: sewing, cycling
 :author: capu
 :summary: They're three actually. Come see my process!
+:featured_image: /i-made-another-hip-pack/v1-open-nice.jpg
 
 --------------
 Wait, another?
