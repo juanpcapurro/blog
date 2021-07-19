@@ -8,23 +8,27 @@
 {% for article in articles %}
   <li>
     {% if article.featured_image %}
-        <img class="post-thumbnail" src="{{ article.featured_image }}">
+    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark">
+      <img class="post-thumbnail" src="{{ article.featured_image }}">
+    </a>
     {% endif %}
-     <h2 class="article-title" ><a class="no-decoration" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> 
-    <div class="author-and-date">
+    <div class="article-data">
+      <h2 class="article-title" ><a class="no-decoration" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> 
+      <div class="author-and-date">
         <time class="published" datetime="{{ article.date.isoformat() }}">
           {{ article.locale_date }}
         </time>
-      {% if article.modified %}
-        <time class="modified" datetime="{{ article.modified.isoformat() }}">
-          (Last modified {{ article.locale_modified }})
-        </time>
+        {% if article.modified %}
+          <time class="modified" datetime="{{ article.modified.isoformat() }}">
+            (Last modified {{ article.locale_modified }})
+          </time>
+        {% endif %}
+      </div>
+      <!-- /.post-info -->
+      {% if article.summary %}
+        <div class="entry-summary"> {{ article.summary }} </div>
       {% endif %}
     </div>
-    <!-- /.post-info -->
-    {% if article.summary %}
-        <div class="entry-summary"> {{ article.summary }} </div>
-    {% endif %}
   </li>
 {% endfor %}
 </ul><!-- /#posts-list -->

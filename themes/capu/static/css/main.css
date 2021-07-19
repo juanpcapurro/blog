@@ -100,9 +100,14 @@ blockquote {
   -webkit-padding-start: 0px;
 }
 .post-list li{
-  background-color: #eee;
+  background-color: #d0d0d0;
   margin: 10px 0px;
   padding: 10px
+}
+.post-list .article-data{
+  background-color: #eee;
+  margin: 0px -10px -10px -10px;
+  padding: 10px;
 }
 .post-info{
   display: inline;
