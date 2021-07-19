@@ -135,12 +135,19 @@ blockquote {
   vertical-align: bottom;
 }
 
-.entry-content img, .entry-content video, .page-content img, .page-content video {
+.entry-content img, .entry-content video {
   padding: 1em 5%;
   display: block;
   margin: auto;
   background-color: #e0e0e0;
   max-width: 85%;
+}
+
+.post-thumbnail{
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 30em;
 }
 
 .entry-content video {

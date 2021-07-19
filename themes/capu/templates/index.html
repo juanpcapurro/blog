@@ -7,12 +7,14 @@
 <ul class="post-list styleless-list">
 {% for article in articles %}
   <li>
+    {% if article.featured_image %}
+        <img class="post-thumbnail" src="{{ article.featured_image }}">
+    {% endif %}
      <h2 class="article-title" ><a class="no-decoration" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> 
     <div class="author-and-date">
         <time class="published" datetime="{{ article.date.isoformat() }}">
           {{ article.locale_date }}
         </time>
-      </span>
       {% if article.modified %}
         <time class="modified" datetime="{{ article.modified.isoformat() }}">
           (Last modified {{ article.locale_modified }})
@@ -21,7 +23,7 @@
     </div>
     <!-- /.post-info -->
     {% if article.summary %}
-        <div class="entry-summary"> {{ article.summary }} </div><!-- /.entry-content -->
+        <div class="entry-summary"> {{ article.summary }} </div>
     {% endif %}
   </li>
 {% endfor %}
