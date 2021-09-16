@@ -13,6 +13,9 @@ post [1]_
 Para memes informales o más sincrónicos podés hablarme por Telegram, mi handle
 es @capurro
 
+También podés hablarme por Tox: 
+0C3DD4E73DDD2C8BF754322B68A40CE3FEA311F3AAFDD22BBCBA7DD939281271866DCB475822
+
 Si no tenés Telegram y querés una conversacion mas estilo mensajería
 instantanea preguntame mi numero de telefono por email, y :strike:`te hablo por
 whatsapp, ya que parece que no es opcional instalar esa cosa para participar de
