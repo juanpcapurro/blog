@@ -1,0 +1,300 @@
+#################################
+Acompañenme a comprar un telefono
+#################################
+:date: 2021-10-23
+:summary: si man, estoy programando para ver que telefono me puedo comprar.
+:tags: tech, programming
+:author: capu
+:featured_image:
+
+Intro
+#####
+Ahora tengo un moto G1 que está medio en las ultimas, le cuesta cargar y es medio una paja tener que esperar a que rendericen los mapas por ejemplo, o que si instalo kde-connect me empiece a matar la instancia de OSMand porque no puede tener tantas cosas en segundo plano.
+
+En un momento estaba muy hinchahuevos con que telefono queria tener, que sea chiquito, buena battery life, bootloader desbloqueado... pero me di cuenta que no existia tal cosa, y menos sin un envio internacional.
+
+Creo que si tuviera infinitas ganas de gastar plata y esperar envios me compraría el que sacó F(x)tec, porque siempre tuve ganas de tener un telefono con teclado fisico, y me ceba poder hacer cosas text-first en un memito handheld.
+
+Peeero ahora estoy en Lisboa y puedo comprar algo a un precio mid razonable (más considerando el tax rebate al salir) y no me van a decir nada en la aduana si aparezco con un telefono midrange.
+
+quehacer.txt
+############
+Así que voy a hacer lo siguiente
+
+- bajarme la wiki de lineageos
+- ver todos los metodos de instalar custom recovery, ver cuales no son un absoluto dolor de huevos permisionado
+- filtrar los devices que tienen alguno de esos install methods
+- Armar una listita agrupada por fabricante
+- Ir a un retail con euros billete y comprar el primero que encuentre de la lista
+
+Ya me chupan un huevo todas las demas specs, quiero que respeten mi libertad de que estoy comprando una computadora chikita y es mia y puedo ponerla a correr el software que quiero. O aunque sea que no me hagan saltar por muchos aros para llegar a eso.
+
+Writing capu dice que 400-500eur es un presupuesto razonable (tipo, quiero poder comprar *algún* telefono, y los mas hackeables suelen ser flagships o parecidos). Veremos que dice luego actually-paying-for-things capu.
+
+
+bajarme la wiki de lineageos
+============================
+Es un git clone. Done.
+
+ver todos los metodos de instalar custom recovery, ver cuales no son un absoluto dolor de huevos permisionado
+=============================================================================================================
+ufff veamos, estan en ``_includes/templates/recovery_install_*``, y son varios:
+
+
+metodos chetos
+--------------
+.. code:: 
+
+    - [x] recovery_install_heimdall.md - parece bastante permissionless
+    - [x] recovery_install_edl_custom.md - eeen principio si, booteas into edl y de ahi instalas el recovery, no me parece muy loco
+    - [x] recovery_install_fastboot_ab.md - bastante permissionless, me gusta
+    - [x] recovery_install_fastboot_fairphone.md - si, pero inb4 solo el fairphone lo soporta
+    - [x] recovery_install_fastboot_generic.md - re si
+    - [x] recovery_install_fastboot_unlocked.md - en teoria el mejor creo, pero no creo que haya muchos
+    - [x] recovery_install_fastboot_nexus.md - en principio bien, pero quizas hay un custom_unlock_cmd
+
+metodos descartados
+-------------------
+.. code:: 
+
+    - [x] recovery_install_odin.md - software para windows 7 de samsung, tiro en los huevos
+    - [x] recovery_install_fastboot_nokia.md - no desbloqueable en principio
+    - [x] recovery_install_dd.md - hay que rootearlo primero y eso es device-specific, por ahora no lo considero
+    - [x] recovery_install_fastboot_custom.md - es custom al device, en principio no
+    - [x] recovery_install_fastboot_huawei.md - no, permisionadisimo
+    - [x] recovery_install_fastboot_lenovo.md - jugado, tambien permisionado con algo que me tienen que dar Y PUEDO TENER QUE ESPERAR 14 DIAS WTF
+    - [x] recovery_install_fastboot_oppo.md - jugado, usan un recovery medio injunable
+    - [x] recovery_install_fastboot_realme.md - permisionado pero aplicando desde una app, alto embole
+    - [x] recovery_install_fastboot_zenfone.md - permisionado con una app y puede requerir cuenta de google
+    - [x] recovery_install_fastboot_xiaomi.md - recontra embole, requiere windows y es permisionado
+
+metodos mid-aceptables onda motorola
+------------------------------------
+.. code::
+
+    - [x] recovery_install_fastboot_motorola.md - jugado, ya lo hice mil veces
+    - [x] recovery_install_fastboot_sony.md - hay un quilombo con las drm keys, y es permisionado como el de motorola
+    - [x] recovery_install_fastboot_htc.md - jugado, permisionado como el de motorola
+    - [x] recovery_install_fastboot_lg.md - jugado, me tienen que dar un unlock bin para flashear
+
+filtrar los devices que tienen alguno de esos install methods
+=============================================================
+Esto fue facil, pero me tomó un rato porque resulta que no se python.
+
+Está tambien el problema es que hay muchos que varian con detalles device-specific y puede que sean faciles o un re embole.
+
+.. code:: python
+
+    #!/usr/bin/python3
+
+    import yaml
+    import glob
+    import datetime
+
+    awesome_installers = [ 'heimdall', 'edl_custom', 'fastboot_ab', 'fastboot_fairphone', 'fastboot_generic', 'fastboot_unlocked', 'fastboot_nexus' ]
+
+    acceptable_installers = [ 'fastboot_motorola', 'fastboot_sony', 'fastboot_htc', 'fastboot_lg' ]
+
+    def is_recent(release):
+        if(isinstance(release, datetime.date) or isinstance(release, datetime.datetime)):
+            return release.year > 2017
+        elif(isinstance(release, list)):
+            return is_recent(release[0])
+        elif(isinstance(release, dict)):
+            return is_recent(release.popitem()[1])
+        elif(isinstance(release, str)):
+            return int(release[0:4]) > 2017
+        elif(isinstance(release, int)):
+            return release > 2017
+        else:
+            print(release)
+            print(type(release))
+            return False
+
+    def get_battery(battery):
+        if(isinstance(battery, str)):
+            return battery
+        elif(isinstance(battery, dict)):
+            return str(battery['capacity']) + ' '+str(battery['removable'])
+        elif(isinstance(battery, int)):
+            return str(battery)
+
+    def print_phone(phone):
+        weird_stuff=''
+        extra_steps=['before_recovery_install', 'custom_root_instructions', 'custom_downgrade_instructions']
+        for step in extra_steps:
+            if step in phone:
+                weird_stuff+= phone[step]
+        print(phone['vendor'] +' '+ phone['name'] + ' (' + phone['codename'] + ')| ' + phone['install_method']+' | '+ weird_stuff)
+        print('    '+str(phone['release']) +' | ' +phone['screen'] + ' | ' + get_battery(phone['battery']))
+
+
+
+    devices = glob.glob('./_data/devices/*.yml')
+    device_fds = list(map(open, devices))
+    yaml_objects=list(map(lambda x: yaml.load(x, Loader=yaml.CLoader), device_fds))
+    print("total phone count: ", len(yaml_objects))
+    supported_phones=list(filter(lambda it: len(it['maintainers']) > 0, yaml_objects))
+    print("supported phones: ", len(supported_phones))
+    recent_phones=list(filter(lambda it: is_recent(it['release']), supported_phones))
+    print("recent phones: ", len(recent_phones))
+    print('')
+    awesome_installer_phones = filter(lambda phone: phone['install_method'] in awesome_installers, recent_phones)
+    awesome_installer_phones= sorted(awesome_installer_phones, key=lambda it: it['vendor'])
+    print("awesome installer phones: ", len(awesome_installer_phones))
+
+    for i in awesome_installer_phones: print_phone(i)
+    print('')
+
+    acceptable_installer_phones = filter(lambda phone: phone['install_method'] in acceptable_installers, recent_phones)
+    acceptable_installer_phones= sorted(acceptable_installer_phones, key=lambda it: it['vendor'])
+    print("acceptable installer phones: ", len(acceptable_installer_phones))
+
+    for i in acceptable_installer_phones: print_phone(i)
+
+Hice ademas un par de cosas mas, namely:
+
+- Filtré telefonos previos a 2018 o sin maintainers
+- Mostre la cantidad de telefonos en cada categoria
+- Imprimí tambien unos specs que me interesan, principalmente el tamaño de pantalla, capacidad de bateria y si es removible
+
+Armar una listita agrupada por fabricante
+=========================================
+...esto es la salida del script:
+
+.. code::
+
+    total phone count:  363
+    supported phones:  191
+    recent phones:  88
+
+    awesome installer phones:  36
+    F(x)tec Pro¹ (pro1)| fastboot_nexus | 
+        2019-10 | 152.1 mm (5.99 in) | 3200 False
+    Fairphone 3 (FP3)| fastboot_fairphone | 
+        2019-09 | 143 mm (5.65 in) | 3000 True
+    Google Pixel 5 (redfin)| fastboot_nexus | 
+        2020-10 | 150 mm (6 in) | 4080 False
+    Google Pixel 3 (blueline)| fastboot_nexus | 
+        2018-10 | 139.7 mm (5.5 in) | 2915 False
+    Google Pixel 3a XL (bonito)| fastboot_nexus | 
+        2019-04 | 152.4 mm (6.0 in) | 3700 False
+    Google Pixel 4 XL (coral)| fastboot_nexus | 
+        2019-09 | 160.02 mm (6.3 in) | 3700 False
+    Google Pixel 4a (sunfish)| fastboot_nexus | 
+        2020-08 | 147.57 mm (5.81 in) | 3140 False
+    Google Pixel 3a (sargo)| fastboot_nexus | 
+        2019-04 | 142.2 mm (5.6 in) | 3000 False
+    Google Pixel 4a 5G (bramble)| fastboot_nexus | 
+        2020-10 | 160 mm (6.2 in) | 3885 False
+    Google Pixel 5a (barbet)| fastboot_nexus | 
+        2021-08 | 161 mm (6.34 in) | 4680 False
+    Google Pixel 4 (flame)| fastboot_nexus | 
+        2019-09 | 144.78 mm (5.7 in) | 3430 False
+    Google Pixel 3 XL (crosshatch)| fastboot_nexus | 
+        2018-10 | 160 mm (6.3 in) | 3430 False
+    Nvidia Shield TV 2019 Pro (mdarcy)| fastboot_nexus | 
+        2019-10-28 | None | None
+    OnePlus 8T (kebab)| fastboot_nexus | 
+        2020-10 | 166.37 mm (6.55 in) | 4500 False
+    OnePlus 6 (enchilada)| fastboot_nexus | 
+        2018-04 | 159.512 mm (6.28 in) | 3300 False
+    OnePlus 7T (hotdogb)| fastboot_nexus | 
+        2019-09 | 166.37 mm (6.55 in) | 3800 False
+    OnePlus 8 Pro (instantnoodlep)| fastboot_nexus | 
+        2020-04 | 172.21 mm (6.78 in) | 4510 False
+    OnePlus 9 Pro (lemonadep)| fastboot_nexus | 
+        2021-03 | 170.18 mm (6.7 in) | 4500 False
+    OnePlus 7T Pro (hotdog)| fastboot_nexus | 
+        2019-10 | 169.418 mm (6.67 in) | 4085 False
+    OnePlus 8 (instantnoodle)| fastboot_nexus | 
+        2020-04 | 166.37 mm (6.55 in) | 4300 False
+    OnePlus 6T (fajita)| fastboot_nexus | 
+        2018-11 | 162.814 mm (6.41 in) | 3700 False
+    OnePlus 7 Pro (guacamole)| fastboot_nexus | 
+        2019-05 | 169.418 mm (6.67 in) | 4000 False
+    OnePlus Nord (avicii)| fastboot_nexus | 
+        2020-07-21 | 169.418 mm (6.67 in) | 4115 False
+    Razer Phone 2 (aura)| fastboot_nexus | 
+        2018-10 | 145.29 mm (5.72 in) | 4000 False
+    SHIFT SHIFT6mq (axolotl)| fastboot_nexus | 
+        2020-06 | 152.4 mm (6 in) | 3850 True
+    Samsung Galaxy M20 (m20lte)| heimdall | 
+        2019-01-28 | 160 mm (6.3 in) | 5000 False
+    Samsung Galaxy Note10 (d1)| heimdall | 
+        2019-08-23 | 160.0 mm (6.3 in) | 3500 False
+    Samsung Galaxy Tab S6 Lite (Wi-Fi) (gta4xlwifi)| heimdall | 
+        2020-04-02 | 264.16 mm (10.4 in) | 7040 False
+    Samsung Galaxy Note10+ 5G (d2x)| heimdall | 
+        2019-08-23 | 172.7 mm (6.8 in) | 4300 False
+    Samsung Galaxy S10+ (beyond2lte)| heimdall | 
+        2019-03-08 | 162.5 mm (6.4 in) | 4100 False
+    Samsung Galaxy S10e (beyond0lte)| heimdall | 
+        2019-03-08 | 147.3 mm (5.8 in) | 3100 False
+    Samsung Galaxy S10 (beyond1lte)| heimdall | 
+        2019-03-08 | 154.9 mm (6.1 in) | 3400 False
+    Samsung Galaxy Note10+ (d2s)| heimdall | 
+        2019-08-23 | 172.7 mm (6.8 in) | 4300 False
+    Samsung Galaxy S10 5G (beyondx)| heimdall | 
+        2019-03-08 | 170.1 mm (6.7 in) | 4500 False
+    Xiaomi Mi A2 (jasmine_sprout)| fastboot_nexus | 
+        2018-07 | 152.1 mm (5.99 in) | 3010 False
+    Yandex Phone (Amber)| fastboot_nexus | 
+        2018-12 | 143.5 mm (5.65 in) | 3050 False
+
+    acceptable installer phones:  21
+    Motorola Moto G6 Plus (evert)| fastboot_motorola | 
+        2018-05 | 84.5 mm (5.2 in) | 3200 False
+    Motorola Moto E5 Plus (XT1924-1/2/4/5) (rhannah)| fastboot_motorola | 
+        2018-05 | 152.4 mm (6 in) | 5000 False
+    Motorola Moto One Vision/Motorola P50 (kane)| fastboot_motorola | before_recovery_install_moto_exynos_9610
+        2019-05-15 | 160.02 mm (6.3 in) | 3500 False
+    Motorola Edge (racer)| fastboot_motorola | 
+        2020-05 | 170.18 mm (6.7 in) | 4500 False
+    Motorola Moto G7 Power (ocean)| fastboot_motorola | 
+        2019-02 | 157.5 mm (6.2 in) | 5000 False
+    Motorola Moto Z3 Play (beckham)| fastboot_motorola | 
+        2018-06 | 96.2 mm (6.2 in) | 3000 False
+    Motorola Moto G7 Play (channel)| fastboot_motorola | 
+        2019-03 | 144.78 mm (5.7 in) | 3000 False
+    Motorola Moto E5 Plus (XT1924-6/7/8) (hannah)| fastboot_motorola | 
+        2018-05 | 152.4 mm (6 in) | 5000 False
+    Motorola Moto G7 Plus (lake)| fastboot_motorola | 
+        2019-02 | 96.2 mm (6.2 in) | 3000 False
+    Motorola Moto One Power (chef)| fastboot_motorola | 
+        2018-10-10 | 157.48 mm (6.14 in) | 5000 False
+    Motorola Moto One Action (troika)| fastboot_motorola | before_recovery_install_moto_exynos_9610
+        2019-10-31 | 160.02 mm (6.3 in) | 3500 False
+    Motorola Moto E5 Plus (XT1924-3/9) (ahannah)| fastboot_motorola | 
+        2018-05 | 152.4 mm (6 in) | 5000 False
+    Motorola Moto G7 (river)| fastboot_motorola | 
+        2019-02 | 157.5 mm (6.2 in) | 3000 False
+    Sony Xperia XZ2 Compact (xz2c)| fastboot_sony | 
+        2018-04 | 127 mm (5 in) | 2870 False
+    Sony Xperia XA2 Plus (voyager)| fastboot_sony | 
+        2018-07 | 152.4 mm (6.0 in) | 3580 False
+    Sony Xperia XA2 (pioneer)| fastboot_sony | 
+        2018-02 | 132 mm (5.2 in) | 3300 False
+    Sony Xperia XZ2 (akari)| fastboot_sony | 
+        2018-04 | 145 mm (5.7 in) | 3180 False
+    Sony Xperia 10 (kirin)| fastboot_sony | 
+        2019-02 | 152.4 mm (6 in) | 2870 False
+    Sony Xperia XA2 Ultra (discovery)| fastboot_sony | 
+        2018-02 | 152.4 mm (6 in) | 3580 False
+    Sony Xperia XZ3 (akatsuki)| fastboot_sony | 
+        2018-10 | 153 mm (6.0 in) | 3300 False
+    Sony Xperia 10 Plus (mermaid)| fastboot_sony | 
+        2019-02 | 165.1 mm (6.5 in) | 3000 False
+
+De esto descubrí:
+
+- El fairphone y un SHIFT que ni juno son los unicos telefonos con bateria removible que salieron en los ultimos 3 años. Odio todo.
+- La lista no es tan distinta a lo que ya conocia, que los pixel y oneplus estan bien pensados para 1337 h4x0rs, y la mayoria de los motorolas son desbloqueables sin hacer mucha magia
+- Me sorprendió que aparecieron un par de samsungs, no veia venir.
+- El F(x)tec no te pide nada para desbloquear. inb4 me lo termino pidiendo.
+
+Upon further research, encontré que para los sony *sólo algunos releases son desbloqueables*, así que salvo que tengan un sticker de 'para nerdos que no ironicamente a veces leen lo que escribe richard stallman', los voy a evitar.
+
+Ir a un retail con euros billete y comprar el primero que encuentre de la lista
+===============================================================================
+Esto para la próxima. Ahora tengo que ponerme a de hecho laburar.
