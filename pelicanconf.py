@@ -68,8 +68,8 @@ DEFAULT_PAGINATION = False
 
 THEME = 'themes/capu'
 
-PLUGIN_PATHS = ['plugins']
-PLUGINS = ['pelican-global-rst-include','video', 'plantuml']
+PLUGIN_PATHS = ['plugins', 'plugins/pelican-plugins']
+PLUGINS = ['pelican-global-rst-include','video', 'plantuml', 'readtime']
 
 # idk, this seems to be relative to the context directory
 RST_GLOBAL_INCLUDES =['../globals/globals.rst']

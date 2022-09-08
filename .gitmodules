@@ -1,3 +1,6 @@
 [submodule "plugins/pelican-global-rst-include"]
 	path = plugins/pelican-global-rst-include
 	url = git@github.com:juanpcapurro/pelican-global-rst-include.git
+[submodule "plugins/pelican-plugins"]
+	path = plugins/pelican-plugins
+	url = git@github.com:getpelican/pelican-plugins.git

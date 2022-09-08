@@ -43,7 +43,8 @@
       </time>
     </div>
     {% endif %}
-    {% if article.authors %}
+    {% if article.readtime %}
+      <div> -{{article.readtime.minutes}} minutes of your life</div>
     {% endif %}
     {% if article.tags %}
     <div class="tags">

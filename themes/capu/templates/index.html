@@ -23,6 +23,11 @@
             (Last modified {{ article.locale_modified }})
           </time>
         {% endif %}
+        {% if article.readtime %}
+          <div>
+            -{{ article.readtime.minutes }} minutes of your life
+          </div>
+        {% endif %}
       </div>
       <!-- /.post-info -->
       {% if article.summary %}
