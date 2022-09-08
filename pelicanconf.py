@@ -2,10 +2,14 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 import random
+from zlib import adler32
+
+def deterministic_choice(sequence, choice_seed):
+    return sequence[adler32(bytes(choice_seed, 'utf8')) % len(sequence)]
 
 JINJA_FILTERS = { \
                  'pick_reccomendations': lambda array, article: random.sample([i for i in array if i.title != article.title], min(len(array), 3)),\
-                 'pick_subtitle': lambda subtitles: random.choice(subtitles)\
+                 'pick_subtitle': deterministic_choice\
                  }
 
 AUTHOR = 'capu'
@@ -14,6 +18,10 @@ SITEURL = 'http://127.0.0.1:8000'
 SITESUBTITLE = ['I\'m probably over-engineering this',\
                 'You can\'t downvote me here',\
                 'También en castellano, wachin',\
+                'Tope (inferior) de gama',\
+                'Brazing fast',\
+                'Come surf Dunning-Kruger\'s crest with me',\
+                'World\'s Okayest Programmer',\
                 'We have nothing to lose but our OSDE 210',\
                 'Alta paja agregar comentarios, mandame un mail',\
                 'Cookie free! NGINX logs your IP, tho',
