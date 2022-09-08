@@ -1,14 +1,23 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
-import random
+#!/usr/bin/env python3
 from zlib import adler32
 
 def deterministic_choice(sequence, choice_seed):
     return sequence[adler32(bytes(choice_seed, 'utf8')) % len(sequence)]
 
+def deterministic_triple(sequence, choice_seed):
+    result = []
+    nonces = ['a', 'b','c','d','e','f','g','h']
+    nonceIndex = 0
+    while len(result) < min(len(sequence), 3):
+        choice = deterministic_choice(sequence, choice_seed+nonces[nonceIndex])
+        if choice not in result:
+            result.append(choice)
+        nonceIndex=nonceIndex+1
+    return result
+
+
 JINJA_FILTERS = { \
-                 'pick_reccomendations': lambda array, article: random.sample([i for i in array if i.title != article.title], min(len(array), 3)),\
+                 'pick_reccomendations': lambda array, article: deterministic_triple([i for i in array if i.title != article], article.title),\
                  'pick_subtitle': deterministic_choice\
                  }
 
