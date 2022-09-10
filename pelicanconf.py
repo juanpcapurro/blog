@@ -49,6 +49,8 @@ SITESUBTITLE = ['I\'m probably over-engineering this',\
                 'Hack the planet! (it\'s a reference)',\
                 'No backups. Can\'t restore. Don\'t want to either.']
 
+COMMENTS_URL="http://127.0.0.1:5000"
+
 PATH = 'content'
 
 TIMEZONE = 'America/Argentina/Buenos_Aires'

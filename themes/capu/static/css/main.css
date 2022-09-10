@@ -189,6 +189,38 @@ tt, .code {
 .allcaps{
   text-transform: uppercase;
 }
+.comment-form {
+  padding: 1em;
+  background-color: #efefef;
+  border-radius: 5px;
+}
+
+.comment-form textarea{
+  width: 100%;
+  border-radius: 5px;
+}
+.comment-form input {
+  border-radius: 5px;
+  padding: 0.5em;
+  border-style: groove;
+}
+.comment-form input[type="submit"]{
+  background-color: #0087be;
+  color: #FFF;
+  font-size: 1em;
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+.comment-form label {
+  color: #666;
+}
+.comment-form .horizontal-label {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em 0;
+}
+}
 
 @media screen and (max-width: 768px) {
   .wrapper {

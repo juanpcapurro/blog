@@ -59,9 +59,7 @@
     {{ article.content }}
   </div><!-- /.entry-content -->
 </section>
-  You can follow this blog via the <a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}">RSS feed</a> or join <a href="https://t.me/elblogdecapu">the telegram broadcast</a>
 <h3> Also on this blog: </h3>
-<hr />
 <ul>
   {% for reccomendation in articles | pick_reccomendations(article) %}
     <li>
@@ -69,5 +67,30 @@
     </li>
   {% endfor %}
 </ul>
+<form class="comment-form" action="{{COMMENTS_URL}}/newcomment" method="POST">
+  <input type="hidden" value="{{article.slug}}" name="slug"/>
+  <div>
+    <label> comment:
+      <div>
+        <textarea class="form-text" rows="5" name="comment"></textarea>
+      </div>
+    </label>
+  </div>
+  <label class="horizontal-label">
+    <div>name:</div>
+    <input type="text" name="name" required placeholder="gamertags allowed"/>
+  </label>
+  <label class="horizontal-label">
+    <div>contact:</div>
+    <input type="text" name="email" required placeholder="email, tox, telegram?"/>
+  </label class="horizontal-label">
+  <label class="horizontal-label">
+    <div>nonce (for now just use 420 or 69):</div>
+    <input type="number" name="nonce"/>
+  </label>
+  <input type="submit" />
+</form>
+  You can follow this blog via the <a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}">RSS feed</a> or join <a href="https://t.me/elblogdecapu">the telegram broadcast</a>
+<h3>Comments</h3>
 <a href="{{ SITEURL }}">Back to article list</a> 
 {% endblock %}
