@@ -91,6 +91,11 @@
   <input type="submit" />
 </form>
   You can follow this blog via the <a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}">RSS feed</a> or join <a href="https://t.me/elblogdecapu">the telegram broadcast</a>
+{% if STATIC_COMMENTS %}
 <h3>Comments</h3>
+<section id="comments" class="comment-content">
+{{ article.metadata.static_comments }}
+</section>
+{% endif %}
 <a href="{{ SITEURL }}">Back to article list</a> 
 {% endblock %}

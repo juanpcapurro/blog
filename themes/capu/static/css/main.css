@@ -220,6 +220,17 @@ tt, .code {
   justify-content: space-between;
   margin: 0.5em 0;
 }
+.comment-content .comment-entry {
+  margin: 1em;
+  padding: 1em;
+
+  background-color: #f4f4f4;
+}
+.comment-content header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
 }
 
 @media screen and (max-width: 768px) {
