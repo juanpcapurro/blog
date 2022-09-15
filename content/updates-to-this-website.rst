@@ -2,7 +2,7 @@
 Updates to this website!
 ========================
 :date: 2020-10-02
-:tags: misc capu-tries-tech
+:tags: meta, tech
 :author: capu
 :summary: The subtitle changes. That's pretty much it.
 

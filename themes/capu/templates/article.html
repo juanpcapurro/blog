@@ -43,17 +43,17 @@
       </time>
     </div>
     {% endif %}
-    {% if article.readtime %}
-      <div> -{{article.readtime.minutes}} minutes of your life</div>
-    {% endif %}
-    {% if article.tags %}
-    <div class="tags">
-        Tags:
+    <div>
+      Stats: 
+      {% if article.readtime %}
+       -{{article.readtime.minutes}} [minutes of your life]
+      {% endif %}
+      {% if article.tags %}
         {% for tag in article.tags %}
-            <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+         +1 <a href="{{ SITEURL }}/{{ tag.url }}">[{{ tag }}]</a> 
         {% endfor %}
+      {% endif %}
     </div>
-    {% endif %}
   </footer><!-- /.post-info -->
   <div class="entry-content">
     {{ article.content }}

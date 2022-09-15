@@ -2,7 +2,7 @@
 Hice mi primer salida con mi packraft ✨
 ========================================
 :date: 2021-07-26
-:tags: cycling, packrafting, bikerafting
+:tags: cycling, bikerafting
 :author: capu
 :summary: Ya no necesito esos estúpidos puentes
 :featured_image: /primer-remada/IMG_20210725_153900.jpg

@@ -2,7 +2,7 @@
 Nuevas formas de seguir este blog
 =================================
 :date: 2020-10-10
-:tags: misc
+:tags: meta
 :lang: es
 :author: capu
 :summary: Si no me seguís por RSS ahora podés hacerlo con una difusión de Telegram

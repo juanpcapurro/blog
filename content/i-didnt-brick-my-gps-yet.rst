@@ -2,7 +2,7 @@
 I didn't brick my GPS yet!
 ==========================
 :date: 2020-08-13
-:tags: capu-tries-tech, cycling
+:tags: tech, cycling
 :author: capu
 :status: draft
 :summary: Let's see if I can make this thing tell me where to go

@@ -2,7 +2,7 @@
 Let's try Seamly2D
 ==================
 :date: 2020-08-23
-:tags: sewing, capu-tries-tech
+:tags: sewing, tech
 :author: capu
 :summary: Let's hope I don't end up in suckless repositories again
 :featured_image: /lets-try-seamly-2d/tiled-pdf.png

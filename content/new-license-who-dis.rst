@@ -2,7 +2,7 @@
 New license, who dis?
 ======================
 :date: 2021-07-16
-:tags: meta, software, fringe political views
+:tags: meta, fringe political views
 :author: capu
 :summary: ✨ share ✨
 

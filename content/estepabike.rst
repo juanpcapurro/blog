@@ -3,7 +3,7 @@ Vine con una bici piñon fijo a la cordillera y te lo muestro
 ############################################################
 :date: 2022-08-24
 :summary: mi Chill Machine es una mala mountainbike, zafa como estepabike
-:tags: cycling
+:tags: cycling, expedition
 :author: capu
 :featured_image: /estepabike/IMG_20220817_164913.jpg
 

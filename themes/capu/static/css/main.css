@@ -121,10 +121,8 @@ blockquote {
 .entry-summary p {
   margin: 0px;
 }
-.author-and-date{
+.article-metadata{
   margin: 0.5em 1em;
-  display: flex;
-  justify-content: space-between;
 }
 .strike {
   text-decoration: line-through;

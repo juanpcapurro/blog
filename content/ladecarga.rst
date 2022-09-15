@@ -3,7 +3,7 @@ Nueva bici: La Robapallets
 ##########################
 :date: 2022-06-12
 :summary: CW: post de cornuda, pero de bicis
-:tags: 
+:tags: cycling, meatspace hacking
 :author: capu
 :featured_image: /ladecarga/IMG_20220528_180043_980.jpg
 

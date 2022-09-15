@@ -2,7 +2,7 @@
 Why reStructuredText?
 =====================
 :date: 2020-06-20
-:tags: capu-tries-tech
+:tags: tech, programming
 :author: capu
 :summary: Content warning: extensibility
 

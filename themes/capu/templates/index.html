@@ -14,7 +14,7 @@
     {% endif %}
     <div class="article-data">
       <h2 class="article-title" ><a class="no-decoration" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> 
-      <div class="author-and-date">
+      <div class="article-metadata">
         <time class="published" datetime="{{ article.date.isoformat() }}">
           {{ article.locale_date }}
         </time>
@@ -23,11 +23,17 @@
             (Last modified {{ article.locale_modified }})
           </time>
         {% endif %}
-        {% if article.readtime %}
-          <div>
-            -{{ article.readtime.minutes }} minutes of your life
-          </div>
-        {% endif %}
+        <div>
+          Stats: 
+          {% if article.readtime %}
+           -{{article.readtime.minutes}} [minutes of your life]
+          {% endif %}
+          {% if article.tags %}
+            {% for tag in article.tags %}
+             +1 <a href="{{ SITEURL }}/{{ tag.url }}">[{{ tag }}]</a> 
+            {% endfor %}
+          {% endif %}
+        </div>
       </div>
       <!-- /.post-info -->
       {% if article.summary %}

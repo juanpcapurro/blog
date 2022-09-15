@@ -3,7 +3,7 @@ Acompañenme a comprar un telefono
 #################################
 :date: 2021-10-23
 :summary: si man, estoy programando para ver que telefono me puedo comprar.
-:tags: tech, programming
+:tags: tech, programming, fringe political views
 :author: capu
 :featured_image:
 

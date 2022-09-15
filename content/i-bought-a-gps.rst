@@ -2,7 +2,7 @@
 I bought a GPS!
 ===============
 :date: 2020-08-14
-:tags: capu-tries-tech, cycling
+:tags: tech, cycling
 :author: capu
 :summary: Let's see if I brick it or get bored first
 

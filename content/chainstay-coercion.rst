@@ -3,7 +3,7 @@ Como hacer cosas que no hay que hacer: deformando chainstays
 ############################################################
 :date: 2021-09-01
 :summary: garantía? quien te conoce papá
-:tags: cycling
+:tags: cycling, meatspace hacking
 :author: capu
 :featured_image: /chainstay-coercion/thumbnail.jpg
 

@@ -3,7 +3,7 @@ Amo tanto a este bar que diseñé un bolso para ir a buscar sus panchos
 =======================================================================
 :date: 2020-12-02
 :modified: 2020-12-14
-:tags: cycling, sewing
+:tags: cycling, sewing, existence-management
 :summary: E intenté que me noticeen, obvio
 :featured_image: /hot-dog-bag/IMG_20201129_174836.jpg
 

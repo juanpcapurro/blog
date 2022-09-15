@@ -2,7 +2,7 @@
 So I have a blog now
 =======================
 :date: 2019-06-12 22:04
-:tags: capu-tries-tech
+:tags: tech, meta
 :author: capu
 :summary: Today is the day I begin my journey towards my life goal of being an internet personality in my second language.
 

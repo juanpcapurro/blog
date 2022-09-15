@@ -2,7 +2,7 @@
 Where we're going, we don't need StackOverflow
 ==============================================
 :date: 2020-09-12
-:tags: capu-tries-tech, debugging, unix
+:tags: tech, debugging, unix
 :author: capu
 :summary: Googling error messages is nice, but what if the apocalypse comes and you only have an offline debian repository and some paracord?
 

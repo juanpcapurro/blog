@@ -3,7 +3,7 @@
 #########################################################
 :date: 2022-09-08
 :summary: TL;DR: siganme en `@vasectomio <https://www.instagram.com/vasectomio/>`_
-:tags: lifestyle
+:tags: existence-management
 :author: capu
 :featured_image:
 
