@@ -1,0 +1,51 @@
+#######################
+Hoy comenzó la distopia
+#######################
+:date: 2022-09-16
+:summary: Le apuntaron una cámara a mi DNI para subirme a un colectivo y estoy enojado
+:tags: fringe political views, tech
+:author: capu
+:slug: dni-scan
+:featured_image:
+
+Escribo esto el 15/9/2022, recién subido a un colectivo de Via Tac en Rio Colorado con destino a Retiro.
+
+Al subir, me pidieron mostrar el DNI. Si bien esto me parece una forrada, es parte de la legislación actual que tenés que mostrar una identificación del estado para subirte a medios de transporte de larga distancia, y no hace ningun avance por cambiarla hacer más dificil el dia de un chofer de colectivos.
+
+Lo que me tomó por sorpresa, y no llegué a reaccionar, es que en vez de pedirme el DNI y a continuación el pasaje, para corroborar que mi cara coincide con la de la tarjetita, y el nombre de la tarjetita coincide con el nombre del pasaje, apuntó la cámara de un celular a mi DNI y me dijo: 'pasá, butaca 64 abajo'.
+
+Qué carajos.
+
+Qué me preocupa de esto
+=======================
+Puede parecerles poco grave, pero piensen por un momento: *no tengo idea qué software corre el teléfono ese*.
+
+Ese teléfono puede, por malicia o incompetencia, estar **guardando** una foto de mi DNI.
+
+Puede pasar que se juntan por malicia para usarlos directamente, o se venden para que alguien más lo haga.
+
+Y en el caso de que sea por incompetencia, alguien que pueda robarle la base de datos a busplus y estamos en el caso anterior.
+
+Miren `La página de busplus <http://check.viatesting.com.ar/servicios?origen_parada=28&destino_parada=807&fecha_ida=22/09/2022&fecha_vuelta=&pasajeros=1&empresaID=1&logo=busplus&cupondescuento=>`_, un link en este caso muestra más que mil palabras de su cypherpunk pretencioso favorito.
+
+Y por qué esto es peligroso?
+============================
+Porque con una foto de un DNI podés hacer un montón de cosas, sobre todo en la época actual en la que la tecnología avanzó lo suficiente como para que las finanzas se hagan por 'apps', pero no tanto como para que enseñen cómo usar criptografía de clave pública en la primaria y tengamos autenticación de verdad a gran escala.
+
+Y estas apps asumen que si alguien tiene una foto de tu DNI, es vos.
+
+Pensar qué actos deleznables se pueden hacer con esto se los dejo como tarea. No quiero que me vengan a decir que armé un tutorial de como vivir la vida loca y que un unsuspecting gil tenga que discutir con la afip por ustedes.
+
+Lo que más me preocupa de esto es que son costos de seguridad y privacidad (y fragilidad, pero eso es otro tema que como no subo gente a colectivos en Maquinchao no me importa) a cambio de *conveniencia* para alguien más, y es particularmente persuadir a alguien de que haga algo menos conveniente para preservar derechos que me puse a pensar que tengo porque estoy dos escalones más arriba de la pirámide de maslow que ese alguien.
+
+Qué voy a hacer al respecto
+===========================
+En cuanto termine de flashar digital nomad voy a tramitarme un nuevo DNI y dejarlo en casa. Además de esto, también le sacaron una foto en el proceso de hacer check-in de un hostel (lo cual es por la mierda más peligroso, btw), y está bueno tener un numero de trámite que solo sepa yo.
+
+En el futuro, planeo ir a las cosas que lo requieren con un DNI desactualizado o el pasaporte, para joder a las cosas que dependen de leer el código específico del DNI.
+
+Voy a ponderar más fuerte llevar el equipamiento necesario para dormir en el piso y moverme por mi cuenta, para poder tener la opción de rechazar un servicio si implica meter identificación estatal en una computadora.
+
+En el futuro me gustaría hacer un barraniviaje, salir de mi casa con la bici, bolsa de dormir, ninguna identificación, y ver cuánto duro hasta que tengo algún problema. Medio en protesta, medio para ver que proporción de la realidad está cagada.
+
+En este viaje tuve un taste de eso: airbnb empezó a rechazar tarjetas de paywithmoon, y sobreviví. No tuve *cottages* para mí solo, pero descubrí el concepto de 'hotel residencial' (?
