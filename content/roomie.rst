@@ -1,0 +1,25 @@
+#####################
+Estoy buscando roomie
+#####################
+:date: 2022-10-02
+:summary: 
+:tags: existence-management
+:author: capu
+:featured_image:
+
+Por el ultimo año y medio estuve viviendo con mi bestie `Bru <https://deftlynot.me>`_, pero esta semana tuvimos un brokeup dado que elle decidió ir a vivir a otra ciudad.
+
+A algunes amigues ya les avisé explícitamente, pero quizás hay alguien con quien re podría convivir que me estoy olvidando o no consideré, y quería hacer una convocatoria abierta.
+
+Siempre bromeo que nunca conviví con alguien que no (estuviera en el espectro autista y fuera anarquista), pero pensandolo bien prefiero que se mantenga así 🙃, puntualmente porque aprecio no importar las reglas no habladas que por defecto tiene la sociedad y armar un conjunto de reglas que sean explícitas y de hecho sirvan a quienes habitan el espacio.
+
+Por ejemplo, con Bru hasta ahora tuvimos una casa sin anuncios insertados programáticamente y con un horario de visitas (alentadas) de 10 a 23hs. Yo tengo ganas de probar tener una casa sin celulares, con una mesita con cargadores en el zaguán donde todes dejan su teléfono al entrar.
+
+La casa en sí está ubicada en la ciudad de Junin, en la zona céntrica, es estilo 'casa chorizo' por lo que no es muy luminosa pero es muy fresca en verano sin usar aire acondicionado, asi que podemos usar todos esos watts de sobra para minar Monero teniendo la misma responsabilidad ambiental que un nocoiner con techo de hormigón armado (?)
+
+Tiene una habitación para cada uno (la que deja bru es la más chica pero aun así es de 4.5x3.5m), una habitación que es oficina con espacio para nosotros 2 + un invitado (aunque todavia no hay tal superavit de escritorios y sillas), un living/cocina que ya tiene sillón, mesita, tele con media server con problemas de drivers y todas las cosas de cocina.
+
+Hay lavadero (con lavarropas), taller con algunos memitos que se pueden compartir, y donde se pueden estacionar cosas de dos ruedas, y un patio con tres árboles: uno da mandarinas, el segundo limones, y el tercero sombra.
+
+El alquiler es ~$220 a repartir entre los dos. Está la opcion de que pagues menos si tenes menos necesidad de espacios comunes, pero no es ideal. Es mucha oficina para mi solo.
+
