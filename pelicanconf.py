@@ -27,10 +27,12 @@ SITEURL = 'http://127.0.0.1:8000'
 SITESUBTITLE = ['I\'m probably over-engineering this',\
                 'You can\'t downvote me here',\
                 'También en castellano, wachin',\
+                'No me \'aggiorno\' un carajo',\
                 'Tope (inferior) de gama',\
                 'Brazing fast',\
                 'Come surf Dunning-Kruger\'s crest with me',\
                 'World\'s Okayest Programmer',\
+                'World\'s Okayest Bike Mechanic',\
                 'We have nothing to lose but our OSDE 210',\
                 'Alta paja agregar comentarios, mandame un mail',\
                 'Cookie free! NGINX logs your IP, tho',
@@ -38,6 +40,9 @@ SITESUBTITLE = ['I\'m probably over-engineering this',\
                 'Software is evil unless you can fork it',\
                 'Content Warning: unsufferable hipsters',\
                 'Hosted on the Other People\'s Computers ☁',\
+                'didn\'t pump yet! you\'re still early!',\
+                'haschash maximalist',\
+                'non-giver of ether',\
                 'Hack the planet! (it\'s a reference)',\
                 'No backups. Can\'t restore. Don\'t want to either.']
 
