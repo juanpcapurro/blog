@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from pathlib import Path
+from os import environ
 from time import time
 from datetime import date
 from flask import Flask, request
@@ -21,8 +22,8 @@ class RequestCounter():
         self.counter[ip] = self.counter[ip]+1 if ip in self.counter else 1
         return self.counter[ip] > 10
 
-content_dir='../output/'
-comment_dir='../comments/'
+content_dir=environ['CONTENT_DIR']
+comment_dir=environ['COMMENT_DIR']
 
 successful_response="""
 <p>
