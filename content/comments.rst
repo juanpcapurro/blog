@@ -1,0 +1,19 @@
+#############################
+Finalmente, tengo comentarios
+#############################
+:date: 2022-12-29
+:summary: inventados completamente acá for fun & profit
+:tags: programming
+:author: capu
+:status: draft
+:slug: comments
+:featured_image:
+
+Antes de que ocurriera el merge de ethereum dije 'uh para cuando Ethereum deje de tener Proof Of Work, MI BLOG VA A TENER'.
+En ese momento estaba vibeando en Viedma, en un café esperando que pase el viento para irme en bici a otro lado.
+
+La idea es que 
+
+Luego la vida sucedió y recientemente recordé mi idea. No implementé proof of work proper, y descubrí que el approach que quiero lograr no solo
+
+
