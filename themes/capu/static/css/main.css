@@ -56,7 +56,7 @@ blockquote {
   font-style: italic;
 }
 .wrapper {
-  max-width: 768px;
+  max-width: 1100px;
   margin: auto;
   padding: 60px 30px;
 }
@@ -160,9 +160,22 @@ blockquote {
   padding: 1em;
 }
 
-/* for reStructuredText ``code`` */
-tt {
+.entry-content p {
+  overflow-wrap: anywhere;
+}
+
+/* for reStructuredText ``code`` and .. code:: */
+tt, .code {
   background-color: #efefef;
+}
+.code {
+  padding: 1em;
+  overflow-x: scroll;
+}
+
+.note {
+  background-color: #E7F2FA;
+  padding: 12px;
 }
 
 .highlight pre {

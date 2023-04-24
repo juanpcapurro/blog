@@ -30,6 +30,7 @@ SITESUBTITLE = ['I\'m probably over-engineering this',\
                 'No me \'aggiorno\' un carajo',\
                 'Tope (inferior) de gama',\
                 'Brazing fast',\
+                'Me gussssstan las herramientas',\
                 'Come surf Dunning-Kruger\'s crest with me',\
                 'World\'s Okayest Programmer',\
                 'World\'s Okayest Bike Mechanic',\
