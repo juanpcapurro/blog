@@ -1,0 +1,34 @@
+#############################
+Announcing: solhint-community
+#############################
+:date: 2023-06-04
+:summary: We're forking solhint to keep it afloat
+:tags: programming
+:author: capu
+:featured_image:
+
+Other developers and myself have been noticing that the solhint repo hasn't been getting much care
+these past few years. The last commit to the master branch is from three months ago, the last
+development cycle didn't yield too many features, and there are `plenty of good PRs ready for review
+or merging which aren't getting any attention <https://github.com/protofire/solhint/pulls>`_.
+
+I have been noticing some frustration with these issues by the solidity community at large, so I
+decided to fork the project.
+
+I of course didn't make this alone, it's a fork after all, and I have to thank mainly `fvictorio
+<https://github.com/fvictorio/>`_ for his mentoring, `drake evans
+<https://github.com/DrakeEvans>`_ for pushing me to start the fork, and the Protofire team and the
+solidity community at large for their hard work so far.
+
+So, this is what I've made:
+
+- `npm package <https://www.npmjs.com/package/solhint-community>`_
+- `github repo <https://github.com/solhint-community/solhint-community>`_
+- `documentation page <https://solhint-community.github.io/solhint-community>`_
+
+Regarding releases:
+
+- ``3.4.1`` has feature parity with the last release of legacy solhint
+- ``3.5.0`` includes the no-empty-blocks update by hackartists, and no-unused-import by myself
+
+Happy lintin'
