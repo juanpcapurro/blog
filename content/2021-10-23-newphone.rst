@@ -84,7 +84,7 @@ Esto fue facil, pero me tomó un rato porque resulta que no se python.
 
 Está tambien el problema es que hay muchos que varian con detalles device-specific y puede que sean faciles o un re embole.
 
-.. code:: python
+.. code-block:: python
 
     #!/usr/bin/python3
 

@@ -10,25 +10,29 @@ Let's play some Ethernauts
 
 Context
 =======
-`Ethernaut <https://ethernaut.openzeppelin.com/>`_ is a capture the flag smart contract security
-game inspired by `overthewire wargames <https://overthewire.org/wargames/>`_ (which are a lot of fun
-as well).
+`Ethernaut <https://ethernaut.openzeppelin.com/>`_ is a capture the flag smart
+contract security game inspired by `overthewire wargames
+<https://overthewire.org/wargames/>`_ (which are a lot of fun as well).
 
-It's been a long time since I got any real amount of work done on smart contracts, and I want to get
-back into it. Perhaps even focus more on security & auditing this time around.
+It's been a long time since I got any real amount of work done on smart
+contracts, and I want to get back into it. Perhaps even focus more on security &
+auditing this time around.
 
-Plus, I'm in my *year of resourcefulness* so I want to have my skills & scripts ready in case I need
-them.
+Plus, I'm in my *year of resourcefulness* so I want to have my skills & scripts
+ready in case I need them.
 
 Plumbing
 ========
-After going down a very uninteresting rabbit hole of trying to replicate the exact same environment
-locally that's available on the sepolia network, so I can have solutions that work against the
-canonical Ethernaut contracts and also run offline, I decided to just fork off from `some anon's work <https://github.com/puffdood/ethernaut_foundry>`_ and `off I went <https://github.com/juanpcapurro/ethernaut-foundry>`_
+After going down a very uninteresting rabbit hole of trying to replicate the
+exact same environment locally that's available on the sepolia network, so I can
+have solutions that work against the canonical Ethernaut contracts and also run
+offline, I decided to just fork off from `some anon's work
+<https://github.com/puffdood/ethernaut_foundry>`_ and off I went.
 
-The repo just runs the contracts in some Foundry tests. It's not clean by any means, but for once I
-want to get to work on the interest stuff instead of spending an entire day sweeping the floor. So
-let's get to it:
+`The repo <https://github.com/juanpcapurro/ethernaut-foundry>`_ just runs the
+contracts in some Foundry tests. It's not clean by any means, but for once I
+want to get to work on the interesting stuff instead of spending an entire day
+sweeping the floor. So let's get to it:
 
 1: Fallback
 ===========
@@ -36,7 +40,7 @@ let's get to it:
 code
 ----
 
-.. code::
+.. code-block:: solidity
 
     pragma solidity ^0.8.13;
     contract Fallback {
@@ -78,11 +82,11 @@ code
 solution
 --------
 
-At first it looks simple enough, but there's a small caveat: the fallback function writes to
-storage, so the 2300 gas ``transfer`` forwards are not enough, and you have to use an explicit
-``call``
+At first it looks simple enough, but there's a small caveat: the fallback
+function writes to storage, so the 2300 gas ``transfer`` forwards are not
+enough, and you have to use an explicit ``call``
 
-.. code::
+.. code-block:: solidity
 
     target.contribute{value: 100 wei}();
     payable(target).call{value: 100 wei, gas: 30000}(bytes(""));
@@ -93,7 +97,7 @@ Fallout
 
 Code
 ----
-.. code::
+.. code-block:: solidity
 
     contract Fallout {
         mapping(address => uint256) public allocations;
@@ -135,18 +139,17 @@ the same name as the contract. It was entirely possible to rename the contract b
 the constructor, and then you had a function open to the world where some important initialization
 probably happened.
 
-.. code::
+.. code-block:: solidity
 
     target.Fal1out();
     target.collectAllocations();
-
 
 CoinFlip
 ========
 
 Code
 ----
-.. code::
+.. code-block:: solidity
 
     contract CoinFlip {
         uint256 public consecutiveWins;
@@ -180,13 +183,14 @@ Code
 
 Solution
 --------
-This one is probably harder from the web interface, since the 'hack' is to pre-compute the same
-logic the contract executes in order to predict the result, and it's easiest to do so from a smart
-contract.
+This one is probably harder from the web interface, since the 'hack' is to
+pre-compute the same logic the contract executes in order to predict the result,
+and it's easiest to do so from a smart contract.
 
-This being a foundry test and all, I had to use the cheatcodes to make the block number advance:
+This being a foundry test and all, I had to use the cheatcodes to make the block
+number advance:
 
-.. code::
+.. code-block:: solidity
 
     function predictFlip() private view returns (bool){
         uint256 blockValue = uint256(blockhash(block.number - 1));
