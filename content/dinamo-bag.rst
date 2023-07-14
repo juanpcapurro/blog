@@ -1,7 +1,7 @@
 =======================================================
 Me compré (no hice) una mochila (que cosió alguien más)
 =======================================================
-:date: 2021-05-8
+:date: 2021-05-08
 :tags: sewing
 :status: draft
 :author: capu

@@ -1,7 +1,7 @@
 ##########################
 So you want to use DSProxy
 ##########################
-:date: 2022-3-01
+:date: 2022-03-01
 :summary: Better delegate that to me \*ba dum tss*
 :tags: programming, solidity
 :author: capu
