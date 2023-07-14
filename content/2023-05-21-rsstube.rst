@@ -1,6 +1,7 @@
 ########################################################
 Un shellazo para hacer un podcast de un canal de youtube
 ########################################################
+:slug: un-shellazo-para-hacer-un-podcast-de-un-canal-de-youtube
 :date: 2023-05-21
 :summary: something something Gordo Diferido
 :tags: programming, fringe political views

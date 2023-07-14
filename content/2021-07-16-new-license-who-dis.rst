@@ -1,6 +1,7 @@
 ======================
 New license, who dis?
 ======================
+:slug: new-license-who-dis
 :date: 2021-07-16
 :tags: meta, fringe political views
 :author: capu

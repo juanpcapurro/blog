@@ -1,6 +1,7 @@
 ===============================
 Guess who made another hip pack
 ===============================
+:slug: guess-who-made-another-hip-pack
 :date: 2020-08-30
 :tags: sewing
 :author: capu

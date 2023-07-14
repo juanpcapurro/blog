@@ -1,6 +1,7 @@
 =========================================================
 Uh colgué en contarles, pero armé mi primer bici a pedido
 =========================================================
+:slug: uh-colgue-en-contarles-pero-arme-mi-primer-bici-a-pedido
 :date: 2021-05-23
 :tags: cycling
 :author: capu

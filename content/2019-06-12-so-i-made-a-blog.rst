@@ -1,6 +1,7 @@
 =======================
 So I have a blog now
 =======================
+:slug: so-i-have-a-blog-now
 :date: 2019-06-12 22:04
 :tags: tech, meta
 :author: capu

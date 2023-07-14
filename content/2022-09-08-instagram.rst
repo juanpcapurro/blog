@@ -1,6 +1,7 @@
 #########################################################
 60 day belong to society challenge: ahora tengo instagram
 #########################################################
+:slug: 60-day-belong-to-society-challenge-ahora-tengo-instagram
 :date: 2022-09-08
 :summary: TL;DR: siganme en `@vasectomio <https://www.instagram.com/vasectomio/>`_
 :tags: existence-management

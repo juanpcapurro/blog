@@ -1,6 +1,7 @@
 ==========================
 I made (another) hip pack!
 ==========================
+:slug: i-made-another-hip-pack
 :date: 2020-05-02
 :tags: sewing, cycling
 :author: capu

@@ -1,6 +1,7 @@
 ##########################
 So you want to use DSProxy
 ##########################
+:slug: so-you-want-to-use-dsproxy
 :date: 2022-03-01
 :summary: Better delegate that to me \*ba dum tss*
 :tags: programming, solidity

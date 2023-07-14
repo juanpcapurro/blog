@@ -1,6 +1,7 @@
 ==================
 Let's try Seamly2D
 ==================
+:slug: lets-try-seamly2d
 :date: 2020-08-23
 :tags: sewing, tech
 :author: capu

@@ -1,6 +1,7 @@
 =====================================
 Joven Porteño Crea Un Bolso Diferente
 =====================================
+:slug: joven-porteno-crea-un-bolso-diferente
 :date: 2020-10-04
 :tags: sewing
 :author: capu

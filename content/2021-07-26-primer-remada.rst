@@ -1,6 +1,7 @@
 ========================================
 Hice mi primer salida con mi packraft ✨
 ========================================
+:slug: hice-mi-primer-salida-con-mi-packraft
 :date: 2021-07-26
 :tags: cycling, bikerafting
 :author: capu

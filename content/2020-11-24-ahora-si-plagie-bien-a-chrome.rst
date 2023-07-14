@@ -1,6 +1,7 @@
 ====================================
 Ahora si plagié bien a Chrome
 ====================================
+:slug: ahora-si-plagie-bien-a-chrome
 :date: 2020-11-24
 :tags: sewing, cycling
 :author: capu

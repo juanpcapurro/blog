@@ -1,6 +1,7 @@
 ====================================================
 Miren, hice una lista awesome pero de cosas de bicis
 ====================================================
+:slug: miren-hice-una-lista-awesome-pero-de-cosas-de-bicis
 :date: 2021-06-28
 :tags: cycling
 :author: capu

@@ -1,6 +1,7 @@
 ====================================
 Qué llevo en mi roll de herramientas
 ====================================
+:slug: que-llevo-en-mi-roll-de-herramientas
 :date: 2021-01-02
 :tags: cycling, sewing
 :summary: Lo hice yo, mirá, es re cuqui.

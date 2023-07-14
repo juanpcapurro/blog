@@ -1,6 +1,7 @@
 =============================
 Nueva bici: The Chill Machine
 =============================
+:slug: nueva-bici-the-chill-machine
 :date: 2021-05-30
 :tags: cycling
 :author: capu

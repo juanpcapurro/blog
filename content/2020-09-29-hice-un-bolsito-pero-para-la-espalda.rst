@@ -1,6 +1,7 @@
 ====================================
 Hice un bolsito pero para la espalda
 ====================================
+:slug: hice-un-bolsito-pero-para-la-espalda
 :date: 2020-09-29
 :tags: sewing, cycling
 :author: capu

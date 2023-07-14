@@ -1,6 +1,7 @@
 ========================
 Updates to this website!
 ========================
+:slug: updates-to-this-website
 :date: 2020-10-02
 :tags: meta, tech
 :author: capu

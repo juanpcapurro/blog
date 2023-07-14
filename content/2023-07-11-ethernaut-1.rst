@@ -1,6 +1,7 @@
 ##########################
 Let's play some Ethernauts
 ##########################
+:slug: lets-play-some-ethernauts
 :date: 2023-07-11
 :summary: let's get back into this 'smart contract development' thing
 :tags: programming

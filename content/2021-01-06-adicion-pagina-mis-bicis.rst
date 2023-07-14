@@ -1,6 +1,7 @@
 =====================================
 Mirá, hice una página para mis bicis
 =====================================
+:slug: mira-hice-una-pagina-para-mis-bicis
 :date: 2021-01-06
 :tags: cycling
 :author: capu

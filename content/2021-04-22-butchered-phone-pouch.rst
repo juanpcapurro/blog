@@ -1,6 +1,7 @@
 ======================================================
 Intenté hacer un portacelular y me quedó como el orto
 ======================================================
+:slug: intente-hacer-un-portacelular-y-me-quedo-como-el-orto
 :date: 2021-04-22
 :tags: sewing, cycling
 :author: capu

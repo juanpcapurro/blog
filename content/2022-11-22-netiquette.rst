@@ -1,6 +1,7 @@
 ##########
 Netiquette
 ##########
+:slug: netiquette
 :date: 2022-11-22
 :summary: reglas que tengo para mis comunicaciones en el cyberespacio
 :tags: existence-management, fringe-political-views

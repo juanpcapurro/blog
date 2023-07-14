@@ -1,6 +1,7 @@
 #######################################################
 Hackeando completamente mi cuadro tope inferior de gama
 #######################################################
+:slug: hackeando-completamente-mi-cuadro-tope-inferior-de-gama
 :date: 2023-05-09
 :summary: No me gusta la geometría del fad nottingham y alta paja hacerme un instagram para comprar
           otro tipo de cuadro

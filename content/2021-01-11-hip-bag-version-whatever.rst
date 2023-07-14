@@ -1,6 +1,7 @@
 ==================================
 Update: otra iteración de hip bags
 ==================================
+:slug: update-otra-iteracion-de-hip-bags
 :date: 2021-01-11
 :tags: cycling, sewing
 :summary: No es mucho una iteración si tiré al carajo todo y empecé de cero, pero bueno

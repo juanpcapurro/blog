@@ -1,6 +1,7 @@
 #####################
 Estoy buscando roomie
 #####################
+:slug: estoy-buscando-roomie
 :date: 2022-10-02
 :summary: 
 :tags: existence-management

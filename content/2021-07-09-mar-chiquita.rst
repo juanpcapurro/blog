@@ -1,6 +1,7 @@
 ================================================
 Salí a explorar y encontré mucha infraestructura
 ================================================
+:slug: sali-a-explorar-y-encontre-mucha-infraestructura
 :date: 2021-07-09
 :tags: cycling, expedition
 :author: capu

@@ -1,6 +1,7 @@
 ==============================================
 Where we're going, we don't need StackOverflow
 ==============================================
+:slug: where-were-going-we-dont-need-stackoverflow
 :date: 2020-09-12
 :tags: tech, debugging, unix
 :author: capu

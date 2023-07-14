@@ -1,6 +1,7 @@
 ###############################################################
 I'm learning how programming languages are built, come join me!
 ###############################################################
+:slug: im-learning-how-programming-languages-are-built-come-join-me
 :date: 2023-05-15
 :summary: `crafting interpreters <https://craftinginterpreters.com/>`_ is one hell of a book
 :tags: programming

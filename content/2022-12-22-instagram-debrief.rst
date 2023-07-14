@@ -1,6 +1,7 @@
 ###########################################
 60 day belong to society challenge: debrief
 ###########################################
+:slug: 60-day-belong-to-society-challenge-debrief
 :date: 2022-12-22
 :summary: No hubo más góticas culonas por abrirme IG. Defarudado.
 :tags: existence-management

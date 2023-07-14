@@ -1,11 +1,11 @@
 #######################
 Hoy comenzó la distopia
 #######################
+:slug: dni-scan
 :date: 2022-09-16
 :summary: Le apuntaron una cámara a mi DNI para subirme a un colectivo y estoy enojado
 :tags: fringe political views, tech
 :author: capu
-:slug: dni-scan
 :featured_image:
 
 Escribo esto el 15/9/2022, recién subido a un colectivo de Via Tac en Rio Colorado con destino a Retiro.

@@ -1,6 +1,7 @@
 =====================
 Why reStructuredText?
 =====================
+:slug: why-restructuredtext
 :date: 2020-06-20
 :tags: tech, programming
 :author: capu

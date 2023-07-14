@@ -1,6 +1,7 @@
 ===============
 I bought a GPS!
 ===============
+:slug: i-bought-a-gps
 :date: 2020-08-14
 :tags: tech, cycling
 :author: capu

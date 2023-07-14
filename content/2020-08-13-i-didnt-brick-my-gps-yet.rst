@@ -1,6 +1,7 @@
 ==========================
 I didn't brick my GPS yet!
 ==========================
+:slug: i-didnt-brick-my-gps-yet
 :date: 2020-08-13
 :tags: tech, cycling
 :author: capu

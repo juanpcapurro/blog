@@ -1,6 +1,7 @@
 #######################################
 Guía de finanzas para wagies argentinos
 #######################################
+:slug: guia-de-finanzas-para-wagies-argentinos
 :date: 2022-11-23
 :summary: no ahorren en pesos no ahorren en pesos no ahorren en pesos no ahorren en pe
 :tags: existence-management

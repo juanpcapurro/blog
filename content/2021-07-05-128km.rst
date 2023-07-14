@@ -1,6 +1,7 @@
 ==================================================
 Hice 118km en un dia y mis rodillas se lo bancaron
 ==================================================
+:slug: hice-118km-en-un-dia-y-mis-rodillas-se-lo-bancaron
 :date: 2021-07-05
 :tags: cycling, expedition
 :author: capu

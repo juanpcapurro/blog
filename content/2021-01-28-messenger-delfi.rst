@@ -1,6 +1,7 @@
 ======================================================
 Otro bolsito mensajero, ahora con un volumen de verdad
 ======================================================
+:slug: otro-bolsito-mensajero-ahora-con-un-volumen-de-verdad
 :date: 2021-01-28
 :tags: sewing, cycling
 :author: capu

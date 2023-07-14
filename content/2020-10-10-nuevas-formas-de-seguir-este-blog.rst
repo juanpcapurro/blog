@@ -1,6 +1,7 @@
 =================================
 Nuevas formas de seguir este blog
 =================================
+:slug: nuevas-formas-de-seguir-este-blog
 :date: 2020-10-10
 :tags: meta
 :lang: es

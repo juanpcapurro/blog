@@ -1,6 +1,7 @@
 ===================================================================
 Too dumb to read the documentation? Intercept system calls instead!
 ===================================================================
+:slug: too-dumb-to-read-the-documentation-intercept-system-calls-instead
 :date: 2019-06-14 22:04
 :tags: unix, debugging
 :author: capu

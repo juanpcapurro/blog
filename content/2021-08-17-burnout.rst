@@ -1,6 +1,7 @@
 #############################
 Estoy saliendo del burnout ✨
 #############################
+:slug: estoy-saliendo-del-burnout
 :date: 2021-08-17
 :summary: Y solo me tomó seis semanas de no hacer nada
 :tags: existence-management

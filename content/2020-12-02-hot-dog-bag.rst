@@ -1,6 +1,7 @@
 =======================================================================
 Amo tanto a este bar que diseñé un bolso para ir a buscar sus panchos
 =======================================================================
+:slug: amo-tanto-a-este-bar-que-disene-un-bolso-para-ir-a-buscar-sus-panchos
 :date: 2020-12-02
 :modified: 2020-12-14
 :tags: cycling, sewing, existence-management

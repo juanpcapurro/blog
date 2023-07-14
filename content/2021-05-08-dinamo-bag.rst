@@ -1,6 +1,7 @@
 =======================================================
 Me compré (no hice) una mochila (que cosió alguien más)
 =======================================================
+:slug: me-compre-no-hice-una-mochila-que-cosio-alguien-mas
 :date: 2021-05-08
 :tags: sewing
 :status: draft
