@@ -8,7 +8,7 @@ Update: otra iteración de hip bags
 
 Iteración es un decir, porque es un diseño completamente distinto.
 
-En un momento me harté de que el Ulock hiciera ruido en el cuadro y decidí llevarlo en la cadera. Para esto tuve que armar el bolso al revés, más parecido a la `primer iteración <{filename}/i-made-another-hip-pack.rst>`_, con las correas agarrándose en la parte de atrás:
+En un momento me harté de que el Ulock hiciera ruido en el cuadro y decidí llevarlo en la cadera. Para esto tuve que armar el bolso al revés, más parecido a la `primer iteración <{filename}/2020-05-02-i-made-another-hip-pack.rst>`_, con las correas agarrándose en la parte de atrás:
 
 .. image:: {static}/hip-bag-version-whatever/photo_2021-01-03_22-15-16.jpg
 
@@ -36,7 +36,7 @@ El Ulock va entre la correa y el resto del bolso. Esto hace que el compartimient
 
 Hay gente que lleva un bolsito que no tiene ninguna forma de pasar un candado y en el cinturón ponen una cosa que les permite agarrarlo, como `el trash wastebasket 2 <https://trashmessengerbags.com/#/products/wastebasket-ii>`_ , quizás en algún momento podría probar eso. Pero me da la impresión de que sentiría mi cadera muy llena de cosas.
 
-Las fotos de este post son de la primer iteración, con liner de tela de pizarra. Ahora estoy usando uno con liner de lona que es un poco más grande, y lleva siempre `mi roll de herramientas <{filename}/tool-roll.rst>`_.
+Las fotos de este post son de la primer iteración, con liner de tela de pizarra. Ahora estoy usando uno con liner de lona que es un poco más grande, y lleva siempre `mi roll de herramientas <{filename}/2021-01-02-tool-roll.rst>`_.
 
 .. image:: {static}/tool-roll/IMG_20201129_175353.jpg
 

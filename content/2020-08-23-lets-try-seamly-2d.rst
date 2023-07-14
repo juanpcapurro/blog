@@ -112,4 +112,4 @@ When developing a product in the future, Seamly2d will be what I'll aspire to in
 
 .. [2] The most distracting bug is sometimes the variables table wouldn't open for no apparent reason, and I had to restart the program to be able to open it. Console output didn't report any errors.
 
-.. _previous blog post: {filename}/i-made-another-hip-pack.rst
+.. _previous blog post: {filename}/2020-05-02-i-made-another-hip-pack.rst

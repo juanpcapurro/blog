@@ -11,7 +11,7 @@ Hice un bolsito pero para la espalda
 
 Si me seguís por cualquier cantidad de tiempo estás al tanto de que estoy básicamente queriendo comprarme un `Chrome Citizen <https://www.chromeindustries.com/product/citizen-messenger-bag/BG-002.html>`_ pero me rehusó a aceptar que either tengo que pagarlo 13k en la tienda oficial y ademas un 100% de fees de importación o pagarle 1.5 salarios mínimos a un contrabandista random de mercadolibre, y estoy haciendo lo que cualquier persona razonable haría: gasté esa guita o más en telas, un pie de ribeteado y me puse a hacerle ingeniería inversa.
 
-Hasta ahora había hecho nomas `bolsitos a la cadera <{filename}/guess-who-made-another-hip-pack.rst>`_ , pero cuando fui a buscar un envió [1]_ en bici con una mochila normal dije 'eh, quizás no es tan una hipstereada [2]_ esto de los bolsos de mensajero, estaría bueno no pegarme la mochila en el cuello y chivarme solo parte de espalda, tendría que apurar esto de hacer uno'.
+Hasta ahora había hecho nomas `bolsitos a la cadera <{filename}/2020-08-30-guess-who-made-another-hip-pack.rst>`_ , pero cuando fui a buscar un envió [1]_ en bici con una mochila normal dije 'eh, quizás no es tan una hipstereada [2]_ esto de los bolsos de mensajero, estaría bueno no pegarme la mochila en el cuello y chivarme solo parte de espalda, tendría que apurar esto de hacer uno'.
 
 Y nada, compré cinta de ribeteado del tamaño del pie esotérico que tengo [3]_, más correa (de polipropileno, porque soy un tarado) y hebillas y me fijé que podía hacer como una primer iteración.
 

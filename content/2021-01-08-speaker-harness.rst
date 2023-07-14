@@ -8,7 +8,7 @@ Hack rápido: arnés para llevar un parlante en el hombro
 
 'Pero por qué querés llevar un parlante en el hombro?', te escucho preguntar. La idea es poder escuchar musiquita cuando ando en bici, sin usar auriculares porque eso es estúpidamente peligroso.
 
-Probablemente recuerdes que :strike:`el chrome citizen` `mi bolso a la espalda <{filename}/ahora-si-plagie-bien-a-chrome.rst>`_ tiene en la correa que pasa por el hombro, una serie de velcros para agarrar cosas:
+Probablemente recuerdes que :strike:`el chrome citizen` `mi bolso a la espalda <{filename}/2020-11-24-ahora-si-plagie-bien-a-chrome.rst>`_ tiene en la correa que pasa por el hombro, una serie de velcros para agarrar cosas:
 
 .. image:: {static}/speaker-harness/IMG_20201230_181805.jpg
 

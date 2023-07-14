@@ -7,7 +7,7 @@ Otro bolsito mensajero, ahora con un volumen de verdad
 :status: draft
 :summary: Pero este es para delfi
 
-Mi `ultima iteracion <{filename}/ahora-si-plagie-bien-a-chrome.rst>`_ está bastante bien, y la vengo usando sin problemas desde hace muchos meses, pero hay un par de cosas que me gustaria cambiar:
+Mi `ultima iteracion <{filename}/2020-11-24-ahora-si-plagie-bien-a-chrome.rst>`_ está bastante bien, y la vengo usando sin problemas desde hace muchos meses, pero hay un par de cosas que me gustaria cambiar:
 
 - Debería tener una profundidad mayor a cero en la parte de arriba, porque con el diseño actual es de un volumen muy chico.
     - Esto tambien implica que el flap deberia ser mas largo pero no estoy seguro de si agregarle la profundidad del bolso o más..

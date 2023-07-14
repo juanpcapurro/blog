@@ -9,7 +9,7 @@ Como hacer cosas que no hay que hacer: deformando chainstays
 
 .. image:: {static}/chainstay-coercion/thumbnail.jpg
 
-Cuando `armé mi chill machine <{filename}/chill-machine.rst>`_ , mencioné que
+Cuando `armé mi chill machine <{filename}/2021-05-30-chill-machine.rst>`_ , mencioné que
 había tenido problemas de clearance entre la chainstay y palanca derechas, y
 que lo resolví a los mazasos.
 

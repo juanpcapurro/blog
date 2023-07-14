@@ -47,8 +47,8 @@ Bicicleterías
   vos y yo. Si buscan algo pregúntenle por redes sociales, que suelen tener más
   cosas que en el iframe de mercadolibre adentro del sitio (?) y mejores
   precios también. La mayoría de las piezas de mi `chill machine
-  <{filename}/chill-machine.rst>`_ y varias de `la bici de Gon
-  <{filename}/gonzas-bike.rst>`_ las compré ahí.
+  <{filename}/2021-05-30-chill-machine.rst>`_ y varias de `la bici de Gon
+  <{filename}/2021-05-23-gonzas-bike.rst>`_ las compré ahí.
 - `Vitius taller <https://www.instagram.com/vitiustaller/>`_ : Tienen local a
   la calle en Villa Crespo, CABA. Fueron los que me re-roscaron el `Roselli
   Pista <{filename}/pages/mis-bicis.rst#roselli-pista>`_ , y me ayudaron a

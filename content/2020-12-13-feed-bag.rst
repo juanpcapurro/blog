@@ -42,7 +42,7 @@ Y con un elástico a la horquilla:
 
 (Sí, ya sé, mi rueda está mal disheada)
 
-Le hice también un bolsillo de jersey, pero con un borde de dobladillo y las puntadas más espaciadas. Igual se hace mierda esa tela, por eso en el `bolso para panchos rusos <{filename}/hot-dog-bag.rst>`_ usé otra técnica.
+Le hice también un bolsillo de jersey, pero con un borde de dobladillo y las puntadas más espaciadas. Igual se hace mierda esa tela, por eso en el `bolso para panchos rusos <{filename}/2020-12-02-hot-dog-bag.rst>`_ usé otra técnica.
 
 .. image:: {static}/feed-bag/IMG_20201129_180156.jpg
 

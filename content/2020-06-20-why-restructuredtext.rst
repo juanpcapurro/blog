@@ -60,4 +60,4 @@ Also, here's `the actual commit <https://github.com/juanpcapurro/blog/commit/e7c
 
 ...I should probably add a link to download the file if the browser doesn't support video. Perhaps for the next time I add one.
 
-.. _previous blog post: {filename}/i-made-another-hip-pack.rst
+.. _previous blog post: {filename}/2020-05-02-i-made-another-hip-pack.rst

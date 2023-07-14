@@ -10,7 +10,7 @@ Let's play some more EVM Puzzles
 
 This post covers `EVM Puzzles <https://github.com/fvictorio/evm-puzzles>`_
 6-10. If you want to see the others, you should check out the `first post
-<{filename}/evm-puzzles-1.rst>`_
+<{filename}/2023-04-14-evm-puzzles-1.rst>`_
 
 Puzzle 6
 ========

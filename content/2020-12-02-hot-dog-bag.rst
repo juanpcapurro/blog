@@ -37,7 +37,7 @@ uh soy un food blogger ahora?
 El bolso
 ========
 
-Cuestión, porque coronavirus es menos una cosa ir a sentarse a un bar, y ponerle `el rack <{filename}/bolso-diferente.rst>`_ a la bici para ir a buscar dos panchos es muy overkill [2]_, y puedo ir con `el bolso a la espalda <{filename}/ahora-si-plagie-bien-a-chrome.rst>`_ pero implica llevar una cosa en la espalda solo para los panchos, y si no soy cuidadoso los puedo aplastar.
+Cuestión, porque coronavirus es menos una cosa ir a sentarse a un bar, y ponerle `el rack <{filename}/2020-10-04-bolso-diferente.rst>`_ a la bici para ir a buscar dos panchos es muy overkill [2]_, y puedo ir con `el bolso a la espalda <{filename}/2020-11-24-ahora-si-plagie-bien-a-chrome.rst>`_ pero implica llevar una cosa en la espalda solo para los panchos, y si no soy cuidadoso los puedo aplastar.
 
 Entonces la solución es un bolso que se agarre al manubrio con velcro, y tenga mas o menos las dimensiones de un par de panchos.
 
@@ -52,7 +52,7 @@ Tiene una forma de sujetarse bastante estandard con dos velcros al manubrio y un
 .. image:: {static}/hot-dog-bag/IMG_20201129_174935.jpg
     :alt: el sistema de sujecion del bolso al manubrio
 
-Tiene bolsillos laterales hechos de la tela ruda de afuera, con un elástico por el borde, que tienen pinta de ser mas duradero que `el jersey mal cosido del feed bag <{filename}/feed-bag.rst>`_
+Tiene bolsillos laterales hechos de la tela ruda de afuera, con un elástico por el borde, que tienen pinta de ser mas duradero que `el jersey mal cosido del feed bag <{filename}/2020-12-13-feed-bag.rst>`_
 
 .. linkear al otro post cuando lo haga
 

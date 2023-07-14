@@ -8,7 +8,7 @@ Intenté hacer un portacelular y me quedó como el orto
 
 La necesidad
 ============
-Mi `bolso de mensajero <{filename}/ahora-si-plagie-bien-a-chrome.rst>`_ es bastante práctico y me permite hacer muchas forradas, pero no puedo realmente acceder el telefono/billetera y cosas chicas de manera práctica sin pasármelo para adelante. Hasta ahora hice un `hack rápido para llevar un parlante <{filename}/speaker-harness.rst>`_ y otra `modificación para llevar el ulock por fuera <{filename}/TODO.rst>`_ , pero tener que sacarme la correa estabilizadora y dar vuelta el bolso para pagar alguna gilada o ver el mapa es una paja, entonces quise hacer un pequeño pouch que fuera en el velcro de la correa principal y me permitiera llevar esos items pequeños y muy frecuentemente usados.
+Mi `bolso de mensajero <{filename}/2020-11-24-ahora-si-plagie-bien-a-chrome.rst>`_ es bastante práctico y me permite hacer muchas forradas, pero no puedo realmente acceder el telefono/billetera y cosas chicas de manera práctica sin pasármelo para adelante. Hasta ahora hice un `hack rápido para llevar un parlante <{filename}/2021-01-08-speaker-harness.rst>`_ y otra modificación para llevar el ulock por fuera  , pero tener que sacarme la correa estabilizadora y dar vuelta el bolso para pagar alguna gilada o ver el mapa es una paja, entonces quise hacer un pequeño pouch que fuera en el velcro de la correa principal y me permitiera llevar esos items pequeños y muy frecuentemente usados.
 
 La inspiración
 ==============

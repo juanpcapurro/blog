@@ -111,7 +111,7 @@ Anexo A: qué les cambiaría
   de estas botas que de cualquier otro calzado.
 - Usaría 0 cartón en la construcción. Es una lastima que la puntera y plantilla interior sean de
   cartón, ya las obliteré a las dos. Entiendo que es una bota barata y debo de haber sido la persona
-  del universo que más `vadeó con ellas <{filename}/estepabike.rst>`_ , pero de no ser por esas dos
+  del universo que más `vadeó con ellas <{filename}/2022-08-24-estepabike.rst>`_ , pero de no ser por esas dos
   esquinas que cortaron, tendría unas botas ahora que se sienten como el primer dia, en vez de unas
   botas que ya se les nota que las cagué a palos.
 - usaría una cupsole apenas más ancha en el metatarso. Están a muy poco de tener la salubridad de

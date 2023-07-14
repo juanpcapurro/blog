@@ -14,7 +14,7 @@ Los tradeoffs
 
 Es muy distinta la UX de un bolso cruzado que de una mochila. Y todo este tiempo estuve usando bolsos cruzados, casi que me habia olvidado de que se podía.
 
-Pero capu, no habías dicho `hace como un año <{filename}/ahora-si-plagie-bien-a-chrome.rst>`_ que era inviable usar una mochila para andar en bici?
+Pero capu, no habías dicho `hace como un año <{filename}/2020-11-24-ahora-si-plagie-bien-a-chrome.rst>`_ que era inviable usar una mochila para andar en bici?
 
 Si, y primero, un montón de opiniones pueden cambiar en un año, y después los argumentos que había expuesto eran:
 

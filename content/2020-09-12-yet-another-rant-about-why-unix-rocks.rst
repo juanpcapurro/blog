@@ -6,7 +6,7 @@ Where we're going, we don't need StackOverflow
 :author: capu
 :summary: Googling error messages is nice, but what if the apocalypse comes and you only have an offline debian repository and some paracord?
 
-A few days ago, `when trying to get gpsbabel to write FIT files <{filename}/i-bought-a-gps.rst>`_ I had to build gpsbabel from sources to make use of a feature implemented only recently, 
+A few days ago, `when trying to get gpsbabel to write FIT files <{filename}/2020-08-14-i-bought-a-gps.rst>`_ I had to build gpsbabel from sources to make use of a feature implemented only recently, 
 
 While CMake was not the 'preferred way' of building the project, I used it because it was the method which gave error messages that I could understand and do something about. [1]_
 

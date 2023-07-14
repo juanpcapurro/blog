@@ -133,7 +133,7 @@ Y me puse a agregarle los puentes:
 
 Resulta que hice super beefy el chainstay bridge y me quitó espacio para el plato, entonces lo tuve
 que amolar casi enteramente de un lado, y encima después de eso aplicarle coerción `como la vez
-pasada <{filename}/chainstay-coercion.rst>`_ para que pueda pasar con lo que moví la chainstay hacia
+pasada <{filename}/2021-09-01-chainstay-coercion.rst>`_ para que pueda pasar con lo que moví la chainstay hacia
 afuera. Tuve a mi hábil recomendador ayudándome:
 
 .. image:: {static}/chomk-machine/photo_2023-05-08_19-53-09.jpg
