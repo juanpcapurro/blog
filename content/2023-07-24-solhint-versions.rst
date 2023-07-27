@@ -3,7 +3,6 @@ Updates to solhint-community versioning
 #######################################
 :slug: updates-to-solhint-community-versioning
 :date: 2023-07-24
-:status: draft
 :summary: Sorry for all those false positives. This should mitigate it.
 :tags: programming
 :author: capu

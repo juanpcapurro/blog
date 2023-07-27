@@ -3,7 +3,7 @@ Let's play some more Ethernauts!
 ################################
 :slug: lets-play-some-more-ethernauts
 :date: 2023-07-14
-:summary: from 04-Telephone through 08-Vault
+:summary: from 04-Telephone through 09-king
 :tags: programming
 :author: capu
 :featured_image:
@@ -28,8 +28,17 @@ Code
 
 Solution
 --------
-This one's cheating. Since the tests are run from a contract, ``msg.sender`` is
-going to be different from ``tx.origin`` already.
+By deploying a contract and calling from it, we can get away from this
+restriction.
+
+.. code-block:: solidity
+
+    contract Caller {
+        function dial(Telephone telephone) external {
+            telephone.changeOwner(msg.sender);
+        }
+    }
+
 
 A funny thing though, is that the address Foundry sets as the EOA initiating the
 transactions (``0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38``) has assets in a
