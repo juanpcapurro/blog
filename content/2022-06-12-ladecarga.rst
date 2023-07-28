@@ -259,7 +259,7 @@ Estoy muy contento de tener una bici de carga que anda, y me permite robar
 pallets, llevar amigues, y comprar muebles.
 
 .. image:: {static}/ladecarga/cajita.jpg
-   :alt: La bici de carga con una estantería y una caja de cerámica arriba
+    :alt: La bici de carga con una estantería y una caja de cerámica arriba
 
 (ahora tengo una estantería)
 

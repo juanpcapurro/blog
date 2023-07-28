@@ -1,6 +1,6 @@
-################################
+########################
 Ethernaut 10: Reentrance
-################################
+########################
 :slug: ethernaut-10-reentrance
 :date: 2023-07-30
 :status: draft
@@ -19,8 +19,8 @@ Code
 ====
 
 .. code-block:: solidity
-   :linenos: inline
-   :hl_lines: 20 22 24
+    :linenos: inline
+    :hl_lines: 20 22 24
 
     contract Reentrance {
         mapping(address => uint256) public balances;
@@ -91,7 +91,7 @@ This attack it's possible because several mitigations are skipped:
 
 
 .. code-block:: solidity
-   :linenos: inline
+    :linenos: inline
 
     function solution(address payable target_) internal override{
         Reentrance target = Reentrance(target_);
@@ -101,8 +101,8 @@ This attack it's possible because several mitigations are skipped:
     }
 
 .. code-block:: solidity
-   :linenos: inline
-   :hl_lines: 17
+    :linenos: inline
+    :hl_lines: 17
 
     contract Reentrooor {
         Reentrance private target;

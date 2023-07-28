@@ -17,8 +17,8 @@ be ``true``.
 Code
 ====
 .. code-block:: solidity
-   :linenos: inline
-   :hl_lines: 12 14
+    :linenos: inline
+    :hl_lines: 12 14
 
     interface Building {
         function isLastFloor(uint256) external returns (bool);
@@ -59,7 +59,7 @@ with it! So the return value doesn't depend on it in any way, instead
 ``true`` from then on.
 
 .. code-block:: solidity
-   :linenos: inline
+    :linenos: inline
 
     contract MyBuilding is Building {
         uint256 private callCount = 0;
@@ -80,7 +80,7 @@ Also, note it doesn't even matter what the floor number actually is, since
 it.
 
 .. code-block:: solidity
-   :linenos: inline
+    :linenos: inline
 
     function solution(address payable target_) internal override{
         Elevator target = Elevator(target_);
