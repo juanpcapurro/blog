@@ -38,7 +38,7 @@ docker save comment-server:latest |xz|pv | ssh selfhost docker load
 
 run it:
 ```
-docker run -v $HOME/comments:/home/app/comments -v /var/www/blog.capu.tech:/home/app/output -p 5000:5000 -d --restart always comment-server:latest 
+ssh selfhost 'docker run -v $HOME/comments:/home/app/comments -v /var/www/blog.capu.tech:/home/app/output -p 5000:5000 -d --restart always comment-server:latest'
 ```
 
 writes comments to a directory on the host, one file per valid article slug.
