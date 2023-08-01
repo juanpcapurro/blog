@@ -3,7 +3,6 @@ Ethernaut 10: Reentrance
 ########################
 :slug: ethernaut-10-reentrance
 :date: 2023-07-30
-:status: draft
 :summary: They're getting less trivial, so let's do one per post so it stays
           readable.
 :tags: programming
