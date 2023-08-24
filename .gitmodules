@@ -4,3 +4,5 @@
 [submodule "plugins/pelican-plugins"]
 	path = plugins/pelican-plugins
 	url = git@github.com:getpelican/pelican-plugins.git
+[submodule "plugins/pelican-global-rst-include/"]
+	url = git@github.com:ryancdotorg/pelican-global-rst-include.git

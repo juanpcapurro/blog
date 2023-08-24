@@ -52,6 +52,9 @@ wrong_nonce_response="""
 """
 request_counter = RequestCounter()
 
+def valid_nonce(slug, email, name, comment, nonce):
+    return nonce in [420,60]
+
 @app.post("/newcomment")
 def newcomment():
     slug=request.form['slug']
@@ -64,7 +67,7 @@ def newcomment():
     if slug not in valid_slugs:
         app.logger.warning(f'invalid slug used: {slug}')
         return invalid_slug_response, 400
-    if nonce not in ['420', '69']:
+    if not valid_nonce(slug, email, name, comment, nonce):
         app.logger.info(f'invalid nonce used: {nonce}')
         return wrong_nonce_response, 400
     if request_counter.isSpamming(request.remote_addr):
