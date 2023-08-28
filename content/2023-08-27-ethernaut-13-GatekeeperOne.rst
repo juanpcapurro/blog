@@ -1,10 +1,9 @@
 ###########################
-Ethernaut 12: GatekeeperOne
+Ethernaut 13: GatekeeperOne
 ###########################
-:date: 2023-09-04
-:slug: ethernaut-12-GatekeeperOne
+:date: 2023-08-27
+:slug: ethernaut-13-GatekeeperOne
 :summary: This'd be easier with some more revert messages 🙃
-:status: draft
 :tags: 
 :author: capu
 :featured_image:
