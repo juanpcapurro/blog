@@ -30,7 +30,7 @@ SITESUBTITLE = ['I\'m probably over-engineering this',\
                 'No me \'aggiorno\' un carajo',\
                 'Tope (inferior) de gama',\
                 'Brazing fast',\
-                'El ingerdiente secreto es el desempleo',\
+                'El ingrediente secreto es el desempleo',\
                 'Secret ingredient: unemployment',\
                 'Me gussssstan las herramientas',\
                 'Come surf Dunning-Kruger\'s crest with me',\
