@@ -2,7 +2,6 @@
 Ethernaut 11: Elevator
 ######################
 :date: 2023-08-06
-:status: draft
 :slug: ethernaut-11-elevator
 :summary: Weird, an ethereum game where the state takes you to the top
 :tags: programming

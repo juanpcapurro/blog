@@ -16,6 +16,7 @@ from pelicanconf import *
 # this was done in order for the site to be available on both http and https
 # future self, please note here how long it took for it to come back and kick me in the balls: 
 SITEURL = 'http://blog.capu.tech'
+COMMENTS_URL="https://blog.capu.tech"
 RELATIVE_URLS = False
 
 DELETE_OUTPUT_DIRECTORY = True

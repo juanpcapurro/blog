@@ -1,8 +1,7 @@
 ######################
 Ethernaut 12: Privacy
 ######################
-:date: 2023-08-13
-:status: draft
+:date: 2023-08-24
 :slug: ethernaut-12-privacy
 :summary: In the internet, ``private`` never means what you expect.
 :tags: programming

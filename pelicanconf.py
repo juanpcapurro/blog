@@ -30,14 +30,13 @@ SITESUBTITLE = ['I\'m probably over-engineering this',\
                 'No me \'aggiorno\' un carajo',\
                 'Tope (inferior) de gama',\
                 'Brazing fast',\
-                'El ingerdiente secreto es el desempleo',\
+                'El ingrediente secreto es el desempleo',\
                 'Secret ingredient: unemployment',\
                 'Me gussssstan las herramientas',\
                 'Come surf Dunning-Kruger\'s crest with me',\
                 'World\'s Okayest Programmer',\
                 'World\'s Okayest Bike Mechanic',\
                 'We have nothing to lose but our OSDE 210',\
-                'Alta paja agregar comentarios, mandame un mail',\
                 'Cookie free! NGINX logs your IP, tho',
                 'Looks just as good in w3m',\
                 'Software is evil unless you can fork it',\
@@ -48,6 +47,8 @@ SITESUBTITLE = ['I\'m probably over-engineering this',\
                 'non-giver of ether',\
                 'Hack the planet! (it\'s a reference)',\
                 'No backups. Can\'t restore. Don\'t want to either.']
+
+COMMENTS_URL="http://127.0.0.1:5000"
 
 PATH = 'content'
 
@@ -77,7 +78,9 @@ DEFAULT_PAGINATION = False
 THEME = 'themes/capu'
 
 PLUGIN_PATHS = ['plugins', 'plugins/pelican-plugins']
-PLUGINS = ['pelican-global-rst-include','video', 'plantuml', 'readtime']
+PLUGINS = ['pelican-global-rst-include','video', 'plantuml', 'readtime', 'static_comments']
+
+STATIC_COMMENTS=True
 
 # idk, this seems to be relative to the context directory
 RST_GLOBAL_INCLUDES =['../globals/globals.rst']
