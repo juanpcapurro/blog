@@ -19,6 +19,7 @@ Code
     :linenos: inline
     :hl_lines: 1
 
+    foo
 
 
 Solution
@@ -26,3 +27,5 @@ Solution
 .. code-block:: solidity
     :linenos: inline
     :hl_lines: 1
+
+    foo

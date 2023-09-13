@@ -49,3 +49,5 @@ Solution
 .. code-block:: solidity
     :linenos: inline
     :hl_lines: 1
+
+    foo
