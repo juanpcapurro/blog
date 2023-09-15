@@ -136,7 +136,7 @@ functions to update the admin, so it is an extra smelly smell.
 So next thing I noticed is the proxy and implementation make use of the first
 few storage slots for different things:
 
-.. code::
+.. code-block:: plain
 
     [I] > forge inspect --pretty  PuzzleProxy  storageLayout
     | Name         | Type    | Slot | Offset | Bytes |
@@ -144,7 +144,7 @@ few storage slots for different things:
     | pendingAdmin | address | 0    | 0      | 20    |
     | admin        | address | 1    | 0      | 20    |
 
-.. code::
+.. code-block:: plain
 
     [I] > forge inspect --pretty  PuzzleWallet  storageLayout
     | Name        | Type                        | Slot | Offset | Bytes |

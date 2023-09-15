@@ -8,7 +8,7 @@ Amo tanto a este bar que diseñé un bolso para ir a buscar sus panchos
 :summary: E intenté que me noticeen, obvio
 :featured_image: /hot-dog-bag/IMG_20201129_174836.jpg
 
-.. code:: 
+.. code-block:: plain 
     
     yo no nací para estudiar
     yo no nací para trabajar

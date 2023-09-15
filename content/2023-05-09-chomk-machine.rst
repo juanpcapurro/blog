@@ -48,7 +48,7 @@ Lo mas chico tubeless-compatible que encontré fueron unas maxxis beaver en 50mm
 La rueda, con esas cubiertas, me debería quedar de un radio apenas mas chico que con los neumaticos
 actuales:
 
-.. code::
+.. code-block:: plain
 
     (current_rim_diameter/2)+current_tire_size
     (622/2)+35

@@ -15,7 +15,7 @@ This post covers `EVM Puzzles <https://github.com/fvictorio/evm-puzzles>`_
 Puzzle 6
 ========
 
-.. code::
+.. code-block:: plain
 
     00      6000      PUSH1 00     // [ 00 ]
     02      35        CALLDATALOAD // [ DATA[0] ] first *word* (32 bytes)
@@ -31,7 +31,7 @@ Puzzle 6
 
 So I just have to send ``0A`` as calldata, and it'll jump to ``0A``. Easy peasy.
 
-.. code::
+.. code-block:: plain
 
     ? Enter the calldata: 0x0A
     Wrong solution :(
@@ -47,7 +47,7 @@ So I just have to send ``0A`` as calldata, and it'll jump to ``0A``. Easy peasy.
     problems, such as un-breaking my linter or achieveing 'syntax' highlighting
     with only lexical analysis
 
-.. code::
+.. code-block:: plain
 
     ? Enter the calldata: 0x000000000000000000000000000000000000000000000000000000000000000A
     Puzzle solved!
@@ -78,12 +78,12 @@ Remember that a machine can be little-endian or big-endian. As a refresher,
 imagine an ``uint16_t`` in a 32 bit machine with the value "420". Or
 ``0x1A4``. In memory, it can be stored as both:
 
-.. code::
+.. code-block:: plain
 
     value:        00 00 01 A4
     memory index: 00 01 02 03
 
-.. code::
+.. code-block:: plain
 
     value:        A4 01 00 00
     memory index: 00 01 02 03
@@ -110,7 +110,7 @@ stack.
 Puzzle 7
 ========
 
-.. code::
+.. code-block:: plain
 
     00      36        CALLDATASIZE // [ len(DATA) ]
     01      6000      PUSH1 00     // [ 00 len(DATA) ]
@@ -144,7 +144,7 @@ with no fallback/receive function is specified to do.
 
 Let's debug the birth of a contract with Foundry:
 
-.. code::
+.. code-block:: plain
 
     contract C {}
 
@@ -157,7 +157,7 @@ Let's debug the birth of a contract with Foundry:
         }
     }
 
-.. code::
+.. code-block:: plain
 
     Running 1 test for test/Counter.t.sol:CreationDemo
     [PASS] test() (gas: 49750)
@@ -170,7 +170,7 @@ Let's debug the birth of a contract with Foundry:
 
 knowing these three values, let's run the thing opcode-by-opcode with ``forge test --debug test``
 
-.. code::
+.. code-block:: plain
 
     ┌Address: 0x7fa9385be102ac3eac297483dd6233d62b3e1496 | PC: 1970 | Gas used in call: 3718─────────────────────────────────────┐
     │07ad| SWAP2                                                                                                                 │
@@ -210,7 +210,7 @@ Exactly the same as the ``type(C).creationCode``. No surprises here.
 I ran the contract initialization step by step to fully understand its execution, but the gist of it
 is:
 
-.. code::
+.. code-block:: plain
 
     00: PUSH1 0x80  //
     02: PUSH1 0x40  // solidity's memory initialization,
@@ -252,7 +252,7 @@ This seems to be the code that's actually deployed.
 more so, when continuing the execution, I the CREATE opcode has pushed the address for the new
 contract to the stack, and nothing related to the bytecode just 'returned' [1]_ .
 
-.. code::
+.. code-block:: plain
 
     ┌Address: 0x7fa9385be102ac3eac297483dd6233d62b3e1496 | PC: 1971 | Gas used in call: 48384────────────┐
     │07b3|▶DUP1                                                                                          │
@@ -279,7 +279,7 @@ So, if I understood correctly, contract creation works as follows:
 
 let's try it out then. I shoud craft some bytecode returning a one-byte value.
 
-.. code::
+.. code-block:: plain
 
     00 PUSH1 01 // [01]
     02 PUSH1 00 // [00 01]
@@ -288,7 +288,7 @@ let's try it out then. I shoud craft some bytecode returning a one-byte value.
 serialized, it should be: ``0x60016000F3``. Although I'm referencing memory that I haven't
 initialized, perhaps that'll yield an error?
 
-.. code::
+.. code-block:: plain
 
     ? Enter the calldata: 0x60016000F3
 
@@ -299,7 +299,7 @@ initialized, perhaps that'll yield an error?
 Puzzle 8
 ========
 
-.. code::
+.. code-block:: plain
 
     00      36        CALLDATASIZE // [ len(DATA) ]
     01      6000      PUSH1 00     // [ 00 len(DATA) ]
@@ -330,7 +330,7 @@ Puzzle 8
 this is mostly like the previous one, but instead of there being restrictions on the size of the
 contract, it should revert. Will a single revert opcode work?
 
-.. code::
+.. code-block:: plain
 
     00 PUSH1 FD // [ FD ]
     02 PUSH2 00 // [ 00 FD ]
@@ -341,7 +341,7 @@ contract, it should revert. Will a single revert opcode work?
 
 serialized it should be: ``0x60FD60005360016000F3``
 
-.. code::
+.. code-block:: plain
 
     ? Enter the calldata: 0x60FD60005360016000F3
     Puzzle solved!
@@ -352,7 +352,7 @@ actually valid or if the internal transaction actually reverts with a stack unde
 Puzzle 9
 ========
 
-.. code::
+.. code-block:: plain
 
     00      36        CALLDATASIZE // [ len(DATA) ]
     01      6003      PUSH1 03     // [ 03 len(DATA) ]
@@ -383,7 +383,7 @@ I gotta find both value & calldata so that
 let's try my favorite kind of case: the degenerate case. Value 1, calldata length 8:
 ``0xFFFFFFFFFFFFFFFF``
 
-.. code::
+.. code-block:: plain
 
     ? Enter the value to send: 1
     ? Enter the calldata: 0xFFFFFFFFFFFFFFFF
@@ -395,7 +395,7 @@ let's try my favorite kind of case: the degenerate case. Value 1, calldata lengt
 Puzzle 10
 =========
 
-.. code::
+.. code-block:: plain
 
     00      38          CODESIZE     // [ 1B ] --
     01      34          CALLVALUE    // [ VALUE 1B ] --
@@ -428,7 +428,7 @@ Puzzle 10
 - ``len(CALLDATA)`` should be a multiple of 3, otherwise instruction ``14`` won't jump anywhere
 - ``VALUE`` must be less or equal to ``1B`` -- superfluous considering the first restriction
 
-.. code::
+.. code-block:: plain
 
     ? Enter the value to send: 9
     ? Enter the calldata: 0xFFFFFFFFFFFF
@@ -437,7 +437,7 @@ Puzzle 10
 
 let's check the first item:
 
-.. code::
+.. code-block:: plain
 
     0A+callvalue == 19 <=>
     callvalue==19-0A <=>
@@ -458,7 +458,7 @@ outputs 15 in decimal, the correct answer.
     ``nnoremap <leader>c yypV!bc -l<cr>``
     to make this easier
 
-.. code::
+.. code-block:: plain
 
     ? Enter the value to send: 15
     ? Enter the calldata: 0xFFFFFF
@@ -479,7 +479,7 @@ puzzle' and nothing else, perhaps a slight delay if the vm is implemented in JS
 
 going back to the bytecode:
 
-.. code::
+.. code-block:: plain
 
     00      38          CODESIZE     // [ 1B ] --
     01      34          CALLVALUE    // [ VALUE 1B ] --
@@ -521,7 +521,7 @@ greater than ``0x08``. And there aren't any JUMPDESTs after that other than the 
 What if I send so much that it overflows? Well, I could find a value X such that ``0x0A+X ==
 0x08``. And the EVM doesn't check for overflows, so that could work. The value would be...
 
-.. code::
+.. code-block:: plain
 
     (X+0x0A)-max = 0x08 // it shoud really be a %, but a - is equivalent for a single overflow
     X+0x0A=0x08+max

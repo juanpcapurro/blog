@@ -79,7 +79,7 @@ method is enough to get around it.
         target.transferFrom(attacker, address(this), amount);
     }
 
-.. code::
+.. code-block:: plain
 
     [I] () capu ~/s/ethernaut-solutions (master)> forge test --mc NaughtCoin
     [⠆] Compiling...

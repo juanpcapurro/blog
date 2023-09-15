@@ -163,7 +163,7 @@ this is again easy to do from solidity since I can simply perform the same
 operations on the attacker contract, and, taking advantage of the fact that
 XORing (``^``) is its own inverse:
 
-.. code::
+.. code-block:: plain
 
     A ^ B == C
     =>
@@ -201,7 +201,7 @@ Lastly, stitch the whole thing together:
         new Caller(target);
     }
 
-.. code::
+.. code-block:: plain
 
     Running 1 test for test/14-GatekeeperTwo.t.sol:GatekeeperTwoSolution
     [PASS] testSolution() (gas: 1695202)

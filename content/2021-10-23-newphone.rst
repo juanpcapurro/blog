@@ -44,7 +44,7 @@ ufff veamos, estan en ``_includes/templates/recovery_install_*``, y son varios:
 
 metodos chetos
 --------------
-.. code:: 
+.. code-block:: plain 
 
     - [x] recovery_install_heimdall.md - parece bastante permissionless
     - [x] recovery_install_edl_custom.md - eeen principio si, booteas into edl y de ahi instalas el recovery, no me parece muy loco
@@ -56,7 +56,7 @@ metodos chetos
 
 metodos descartados
 -------------------
-.. code:: 
+.. code-block:: plain 
 
     - [x] recovery_install_odin.md - software para windows 7 de samsung, tiro en los huevos
     - [x] recovery_install_fastboot_nokia.md - no desbloqueable en principio
@@ -71,7 +71,7 @@ metodos descartados
 
 metodos mid-aceptables onda motorola
 ------------------------------------
-.. code::
+.. code-block:: plain
 
     - [x] recovery_install_fastboot_motorola.md - jugado, ya lo hice mil veces
     - [x] recovery_install_fastboot_sony.md - hay un quilombo con las drm keys, y es permisionado como el de motorola
@@ -163,7 +163,7 @@ Armar una listita agrupada por fabricante
 =========================================
 ...esto es la salida del script:
 
-.. code::
+.. code-block:: plain
 
     total phone count:  363
     supported phones:  191

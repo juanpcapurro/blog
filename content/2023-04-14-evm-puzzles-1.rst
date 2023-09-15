@@ -19,7 +19,7 @@ and also showcase my brainfarts and false starts.
 Puzzle 1
 ========
 
-.. code::
+.. code-block:: plain
 
     00      34      CALLVALUE
     01      56      JUMP
@@ -38,7 +38,7 @@ Puzzle 1
 
 Let's dive into what the three columns mean. Take the second one as an example:
 
-.. code::
+.. code-block:: plain
 
     01      56      JUMP
 
@@ -61,7 +61,7 @@ with this, you can interpret the following
 for reference on the available opcodes, you can visit `evm.codes
 <https://evm.codes>`_ . It even has a line-by-line debugger!
 
-.. code::
+.. code-block:: plain
 
     00      34      CALLVALUE // [ VALUE ] push the callvalue onto the stack
     01      56      JUMP      // [] jumped to index VALUE
@@ -77,7 +77,7 @@ for reference on the available opcodes, you can visit `evm.codes
 the contract will jump to whatever value I send. And I want it to jump to index
 ``08``.
 
-.. code:: 
+.. code-block:: plain 
 
     ? Enter the value to send: 8
 
@@ -89,7 +89,7 @@ I find it fun to break things, so when something jumps to whatever I tell it
 to, I wonder: can I make it go back, *unconditionally?*. That'd cause an
 infinite loop.
 
-.. code::
+.. code-block:: plain
 
     ? Enter the value to send: 0
 
@@ -107,7 +107,7 @@ there is something other than a ``JUMPDEST`` opcode. Neat.
 Puzzle 2
 ========
 
-.. code::
+.. code-block:: plain
 
     00      34      CALLVALUE // [VALUE]
     01      38      CODESIZE  // [09 VALUE]
@@ -124,7 +124,7 @@ answer seems to be to find a value such that ``09-VALUE==06``
 
 I can deal with that 😎
 
-.. code::
+.. code-block:: plain
 
     ? Enter the value to send: 3
 
@@ -138,7 +138,7 @@ in computer words.
 
 ``0A-VALUE==06`` means I should send a value of 4.
 
-.. code::
+.. code-block:: plain
 
     ? Enter the value to send: 4
 
@@ -149,7 +149,7 @@ in computer words.
 Puzzle 3
 ========
 
-.. code::
+.. code-block:: plain
 
     00      36      CALLDATASIZE // [len(DATA)]
     01      56      JUMP         // jumped to len(DATA)
@@ -162,7 +162,7 @@ I should send some data as long as it has a length of... 4.
 
 remember each byte is represented by two characters ``0-F``:
 
-.. code::
+.. code-block:: plain
 
     ? Enter the calldata: 0xFFFFFFFF
 
@@ -173,7 +173,7 @@ remember each byte is represented by two characters ``0-F``:
 Puzzle 4
 ========
 
-.. code::
+.. code-block:: plain
 
     00      34      CALLVALUE // [ VALUE ]
     01      38      CODESIZE  // [ 0C VALUE ] -- remember, the lenght, not the last index
@@ -192,7 +192,7 @@ I need to provide a value such that ``0C XOR VALUE == 0A``
 
 my first approach was solve for it bit by bit:
 
-.. code::
+.. code-block:: plain
 
     0C 0000 1100
     ?? ???? ????
@@ -203,14 +203,14 @@ But then I remembered: if ``A XOR B == C``, then ``A XOR C == B``
 
 so:
 
-.. code::
+.. code-block:: plain
 
     0C 0000 1100
     0A 0000 1010
     ============
     06 0000 0110
 
-.. code::
+.. code-block:: plain
 
     ? Enter the value to send: 6
 
@@ -221,7 +221,7 @@ yey.
 Puzzle 5
 ========
 
-.. code::
+.. code-block:: plain
 
     00      34          CALLVALUE  // [ VALUE ]
     01      80          DUP1       // [ VALUE VALUE ]
@@ -243,7 +243,7 @@ I gotta find a value that, squared, is ``0x0100``
 
 when I typed ``0x10``, however, my response was parsed as zero.
 
-.. code::
+.. code-block:: plain
 
   ? Enter the value to send: 0
 
@@ -252,7 +252,7 @@ when I typed ``0x10``, however, my response was parsed as zero.
 Turns out the value is always parsed with base 10. Fun that I managed to get
 this far without realizing it.
 
-.. code::
+.. code-block:: plain
 
   ? Enter the value to send: 16
 
