@@ -4,10 +4,9 @@ Ethernaut 16: Preservation
 :date: 2023-09-17
 :slug: ethernaut-16-preservation
 :summary: What even *is* a library?
-:tags: 
+:tags: programming
 :author: capu
 :featured_image:
-
 
 Objective
 =========

@@ -5,7 +5,7 @@ Ethernaut 17: Recovery
 :status: draft
 :slug: ethernaut-17-recovery
 :summary: TODO
-:tags: 
+:tags: programming
 :author: capu
 :featured_image:
 

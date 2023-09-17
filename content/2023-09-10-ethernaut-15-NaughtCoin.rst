@@ -4,7 +4,7 @@ Ethernaut 15: NaughtCoin
 :date: 2023-09-10
 :slug: ethernaut-15-naughtcoin
 :summary: read what you extend folks
-:tags: 
+:tags: programming
 :author: capu
 :featured_image:
 

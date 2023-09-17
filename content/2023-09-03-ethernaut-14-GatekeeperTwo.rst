@@ -4,7 +4,7 @@ Ethernaut 14: GatekeeperTwo
 :date: 2023-09-03
 :slug: ethernaut-14-GatekeeperTwo
 :summary: Content Warning: Yellowpaper
-:tags: 
+:tags: programming
 :author: capu
 :featured_image:
 

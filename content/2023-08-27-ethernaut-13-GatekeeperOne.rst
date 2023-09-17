@@ -4,7 +4,7 @@ Ethernaut 13: GatekeeperOne
 :date: 2023-08-27
 :slug: ethernaut-13-GatekeeperOne
 :summary: This'd be easier with some more revert messages 🙃
-:tags: 
+:tags: programming
 :author: capu
 :featured_image:
 
