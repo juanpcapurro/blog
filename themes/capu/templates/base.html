@@ -35,54 +35,49 @@
 </head>
 
 <body id="index" class="home">
-    <div class="wrapper">
-
-      <div class="main-header">
-        <a href="{{ SITEURL|e }}">
-            <div class="site-title">
-              {{ SITENAME }}
-            </div>
-            <div class="site-subtitle">
-              {{ SITESUBTITLE | pick_subtitle(output_file) }}
-            </div>
-          </a>
-        <div  class="navigation-section">
-          <ul class="styleless-list">
-            {% if SOCIAL %}
-              {% for name, url in SOCIAL %}
-                <li><a  href="{{ url|e }}" >{{ name }}</a></li>
-              {% endfor %}
-            {% endif %}
-            {% if DISPLAY_PAGES_ON_MENU %}
-              {% for p in pages %}
-                <li><a  href="{{ SITEURL }}/{{ p.url }}" >{{ p.slug }}</a></li>
-              {% endfor %}
-            {% endif %}
-          </ul>
-        </div>
+    <div class="main-header responsive-width">
+      <a href="{{ SITEURL|e }}">
+          <div class="site-title">
+            {{ SITENAME }}
+          </div>
+          <div class="site-subtitle">
+            {{ SITESUBTITLE | pick_subtitle(output_file) }}
+          </div>
+        </a>
+      <div  class="navigation-section">
+        <ul class="styleless-list">
+          {% if SOCIAL %}
+            {% for name, url in SOCIAL %}
+              <li><a  href="{{ url|e }}" >{{ name }}</a></li>
+            {% endfor %}
+          {% endif %}
+          {% if DISPLAY_PAGES_ON_MENU %}
+            {% for p in pages %}
+              <li><a  href="{{ SITEURL }}/{{ p.url }}" >{{ p.slug }}</a></li>
+            {% endfor %}
+          {% endif %}
+        </ul>
       </div>
-      <div class="page-content">
-        {% block content %}
-        {% endblock content %}
-      </div>
-
-      <footer >
-        |
-        {% if FEED_ALL_RSS %}
-            <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/atom+xml" rel="alternate">
-              RSS feed
-              <img class="inline-icon" src="{{ SITEURL }}/theme/images/icons/rss.png">
-            <a/>
-            |
-        {% endif %}
-        {% if LINKS %}
-          {% for name, url in LINKS %}
-            <span><a href="{{ url|e }}">{{ name }}</a></span> |
-          {% endfor %}
-        {% endif %}
-        <br>
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="{{ SITEURL }}/static/licensebutton.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-      </footer>
     </div>
+    <!-- this'll be a <section> element -->
+      {% block content %}
+      {% endblock content %}
+    <footer class="responsive-width">
+      |
+      {% if FEED_ALL_RSS %}
+          <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/atom+xml" rel="alternate">
+            RSS feed
+            <img class="inline-icon" src="{{ SITEURL }}/theme/images/icons/rss.png">
+          <a/>
+          |
+      {% endif %}
+      {% if LINKS %}
+        {% for name, url in LINKS %}
+          <span><a href="{{ url|e }}">{{ name }}</a></span> |
+        {% endfor %}
+      {% endif %}
+      <br>
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="{{ SITEURL }}/static/licensebutton.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </footer>
   </body>
 </html>

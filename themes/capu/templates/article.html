@@ -23,14 +23,14 @@
 
 {% block content %}
 <section id="content" class="body">
-  <header>
+  <header class="responsive-width">
     <h2>
       <a class="entry-title no-decoration" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
          title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
  {% import 'translations.html' as translations with context %}
  {{ translations.translations_for(article) }}
   </header>
-  <footer class="post-info">
+  <footer class="post-info responsive-width">
     <div>
       <time class="published" datetime="{{ article.date.isoformat() }}">
         Published: {{ article.locale_date }}
@@ -55,47 +55,50 @@
       {% endif %}
     </div>
   </footer><!-- /.post-info -->
-  <div class="entry-content">
-    {{ article.content }}
-  </div><!-- /.entry-content -->
+  {{ article.content }}
 </section>
-<h3> Also on this blog: </h3>
-<ul>
+<h3 class="responsive-width"> Also on this blog: </h3>
+<ul class="responsive-width">
   {% for reccomendation in articles | pick_reccomendations(article) %}
     <li>
       <a href="{{ SITEURL }}/{{ reccomendation.url }}">{{ reccomendation.title }}</a> 
     </li>
   {% endfor %}
 </ul>
-<form class="comment-form" action="{{COMMENTS_URL}}/newcomment" method="POST">
-  <input type="hidden" value="{{article.slug}}" name="slug"/>
-  <div>
-    <label> comment:
-      <div>
-        <textarea class="form-text" rows="5" name="comment"></textarea>
-      </div>
+<div class="comment-form-wrapper">
+  <form class="comment-form responsive-width" action="{{COMMENTS_URL}}/newcomment" method="POST">
+    <input type="hidden" value="{{article.slug}}" name="slug"/>
+    <div>
+      <label> comment:
+        <div>
+          <textarea class="form-text" rows="5" name="comment"></textarea>
+        </div>
+      </label>
+    </div>
+    <label class="horizontal-label">
+      <div>name:</div>
+      <input type="text" name="name" required placeholder="gamertags allowed"/>
     </label>
-  </div>
-  <label class="horizontal-label">
-    <div>name:</div>
-    <input type="text" name="name" required placeholder="gamertags allowed"/>
-  </label>
-  <label class="horizontal-label">
-    <div>contact: (won't be published)</div>
-    <input type="text" name="email" required placeholder="email, tox, telegram?"/>
-  </label class="horizontal-label">
-  <label class="horizontal-label">
-    <div>nonce (for now just use 420 or 69):</div>
-    <input type="number" name="nonce"/>
-  </label>
-  <input type="submit" />
-</form>
+    <label class="horizontal-label">
+      <div>contact: (won't be published)</div>
+      <input type="text" name="email" required placeholder="email, tox, telegram?"/>
+    </label class="horizontal-label">
+    <label class="horizontal-label">
+      <div>nonce (for now just use 420 or 69):</div>
+      <input type="number" name="nonce"/>
+    </label>
+    <input type="submit" />
+  </form>
+</div>
+<footer class="responsive-width">
   You can follow this blog via the <a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}">RSS feed</a> or join <a href="https://t.me/elblogdecapu">the telegram broadcast</a>
-{% if STATIC_COMMENTS %}
-<h3>Comments</h3>
-<section id="comments" class="comment-content">
-{{ article.metadata.static_comments }}
-</section>
-{% endif %}
-<a href="{{ SITEURL }}">Back to article list</a> 
-{% endblock %}
+</footer>
+<div class="responsive-width">{% if STATIC_COMMENTS %}
+  <h3 class="responsive-width">Comments</h3>
+  <section id="comments" class="comment-content responsive-width">
+    {{ article.metadata.static_comments }}
+  </section>
+  {% endif %}
+  <a class="responsive-width" href="{{ SITEURL }}">Back to article list</a> 
+  {% endblock %}
+</div>

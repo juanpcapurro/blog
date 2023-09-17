@@ -12,7 +12,7 @@
       <img class="post-thumbnail" src="{{ article.featured_image }}">
     </a>
     {% endif %}
-    <div class="article-data">
+    <div class="article-data responsive-width">
       <h2 class="article-title" ><a class="no-decoration" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> 
       <div class="article-metadata">
         <time class="published" datetime="{{ article.date.isoformat() }}">
@@ -35,7 +35,6 @@
           {% endif %}
         </div>
       </div>
-      <!-- /.post-info -->
       {% if article.summary %}
         <div class="entry-summary"> {{ article.summary }} </div>
       {% endif %}

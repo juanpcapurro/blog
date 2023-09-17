@@ -55,11 +55,39 @@ blockquote {
   letter-spacing: -1px;
   font-style: italic;
 }
-.wrapper {
-  max-width: 70ch;
-  margin: auto;
-  padding: 60px 30px;
+.responsive-width {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding: 60px 30px; TODO: restore look an feel of the rest of the thing */
 }
+
+section  h1 , section  h2, section  h3 , section  h4, section  h5, section  h6{
+  display: block;
+}
+
+section table {
+  width: 40rem;
+}
+
+section  h1 , section  h2, section  h3 , section  h4, section  h5, section  h6,
+section  p ,section  ul, section  ol, section  blockquote, section table,
+section object{
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section object {
+  display: block;
+}
+
+.highlight {
+  margin: 1em 0em;
+  display: flex;
+  justify-content: center;
+}
+
 
 .main-header{
   margin-bottom: 1em;
@@ -95,7 +123,7 @@ blockquote {
   margin: 0px;
 }
 .post-list{
-  margin: 0px;
+  margin: 0px auto;
   padding-inline-start: 0px;
   -webkit-padding-start: 0px;
 }
@@ -108,9 +136,6 @@ blockquote {
   background-color: #eee;
   margin: 0px -10px -10px -10px;
   padding: 10px;
-}
-.post-info{
-  display: inline;
 }
 .publish-time{
   font-style: italic;
@@ -128,7 +153,7 @@ blockquote {
   text-decoration: line-through;
 }
 
-.wrapper > footer {
+.responsive-width > footer {
   /* I've got no formal knowledge of formatting, and this shows it */
   margin-top: 4em;
 }
@@ -140,7 +165,7 @@ blockquote {
   vertical-align: bottom;
 }
 
-.entry-content img, .entry-content video {
+section img, section video {
   padding: 1em 5%;
   display: block;
   margin: auto;
@@ -156,11 +181,11 @@ blockquote {
   max-height: 30em;
 }
 
-.entry-content video {
+section video {
   padding: 1em;
 }
 
-.entry-content p {
+section p {
   overflow-wrap: anywhere;
 }
 
@@ -226,6 +251,7 @@ tt, .code {
 
   background-color: #f4f4f4;
 }
+
 .comment-content header {
   display: flex;
   justify-content: space-between;
@@ -234,7 +260,7 @@ tt, .code {
 }
 
 @media screen and (max-width: 768px) {
-  .wrapper {
+  .responsive-width {
     padding: 0.4rem;
   }
   .post-list{

@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-  {% block content_title %}
-      <h1> {{ page.title }} </h1>
-  {% endblock %}
-  <div class="entry-content">
+  <section id="{{ page.title }}">
+    {% block content_title %}
+    <h1> {{ page.title }} </h1>
+    {% endblock %}
     {{ page.content }}
-  </div><!-- /.entry-content -->
+  </section>
 {% endblock %}
