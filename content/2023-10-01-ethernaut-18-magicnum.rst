@@ -3,8 +3,8 @@ Ethernaut 18: MagicNum
 ###########################
 :date: 2023-10-01
 :slug: ethernaut-18-magicnum
-:summary: you have to use inline assembly to q
-:tags: 
+:summary: I had to use inline assembly to deploy my hand-crafted assembly
+:tags: programming
 :author: capu
 :featured_image:
 
