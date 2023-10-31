@@ -198,6 +198,9 @@ tt, .code {
   padding: 1em;
   overflow-x: scroll;
 }
+.linenos::after {
+  content: ' | '
+}
 
 .note {
   background-color: #E7F2FA;
